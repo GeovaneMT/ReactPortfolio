@@ -12,12 +12,11 @@ export const Container = styled.div`
   > main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     height: 100%;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding: 0 0 120px;
-    gap: 40px;
-    overflow: hidden;
+    gap: 80px;
   }
 
   > div {

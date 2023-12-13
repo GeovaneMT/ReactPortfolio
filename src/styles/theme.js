@@ -1,5 +1,6 @@
 export default {
   COLORS: {
+    //colors
     BACKGROUND: "#020F20",
 
     WHITE: "#E9F0F6",
@@ -10,5 +11,12 @@ export default {
 
     GRADIENT:
       "linear-gradient(-45deg, rgba(1,97,194,0) 0%, rgba(1,97,194,1) 100%)",
+    BGGRADIENT:
+      "linear-gradient(180deg, rgba(2, 15, 32, 0.00) 73.44%, #020F20 91.15%)",
+
+    //font sizes
+    FSBODY: "clamp(14px, 4vw, 16px)",
+    FSSPAN: "clamp(16px, 6vw, 24px);",
+    FSTITLE: "clamp(36px, 6vw, 40px)",
   },
 }

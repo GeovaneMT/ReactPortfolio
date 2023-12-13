@@ -9,7 +9,7 @@ export const Skills = () => {
 
   return (
     <Container>
-      <Anchor text="Contato" />
+      <Anchor text="Habilidades" />
       <main>
         <Header text="Aqui estão minhas  " span="Habilidades" />
         <Slider />

@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 32px 32px 0;
   height: 100%;
   overflow: hidden;
+  background: ${({ theme }) => theme.COLORS.BGGRADIENT};
 
   &::before {
     content: "";
@@ -15,17 +16,33 @@ export const Container = styled.div`
     background-size: cover;
     filter: opacity(0.5);
     z-index: -1;
+    overflow: hidden;
+  }
+
+  li {
+    display: flex;
+    gap: 4px;
+  }
+
+  li,
+  h2 {
+    text-shadow: 0px 4px 4px #020f20;
+  }
+
+  li svg {
+    filter: drop-shadow(0px 4px 4px #020f20);
+    color: ${({ theme }) => theme.COLORS.CYAN};
   }
 
   > main {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding: 0 0 120px;
     gap: 80px;
     align-items: center;
-    overflow-x: hidden;
     background-image: url({background});
   }
 

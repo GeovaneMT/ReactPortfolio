@@ -3,6 +3,10 @@ import styled from "styled-components"
 export const Container = styled.div`
   border-radius: 20px;
 
+  p {
+    text-align: left;
+  }
+
   span {
     font-style: italic;
     color: ${({ theme }) => theme.COLORS.CYAN};
@@ -54,7 +58,8 @@ export const Container = styled.div`
   }
 
   .item .name {
-    font-size: clamp(40px, 7vw, 48px);
+    font-size: ${({ theme }) => theme.COLORS.FSTITLE};
+
     font-weight: bold;
     opacity: 0;
     animation: showcontent 1s ease-in-out 1 forwards;

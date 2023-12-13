@@ -5,17 +5,14 @@ export const Container = styled.div`
   height: 100%;
   overflow: hidden;
 
-  > p {
-    padding-bottom: 32px;
-  }
-
   > main {
     display: flex;
     flex-direction: column;
     height: 94%;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 0 160px;
-    gap: 40px;
+    gap: 80px;
   }
 
   > div {
@@ -31,16 +28,17 @@ export const Container = styled.div`
   }
 
   .text span {
-    font-size: clamp(12px, 4vw, 14px);
     font-weight: bold;
+    font-size: ${({ theme }) => theme.COLORS.FSSPAN};
+    color: ${({ theme }) => theme.COLORS.CYAN};
   }
 
   .text,
-  .content div {
+  .contentPage div {
     display: flex;
     gap: 12px;
     padding: 8%;
-    font-size: clamp(10px, 3vw, 12px);
+    border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
   }
 
   .box,
@@ -51,14 +49,13 @@ export const Container = styled.div`
 
   .box {
     flex-direction: column;
-    gap: 40px;
   }
 
   .box p {
     text-align: left;
   }
 
-  .content {
+  .contentPage {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -67,23 +64,23 @@ export const Container = styled.div`
     align-items: center;
   }
 
-  .content div {
+  .contentPage div {
     border-radius: calc(20px - 12px);
     width: max-content;
     border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  .content p {
+  .contentPage p {
     width: 50%;
     color: ${({ theme }) => theme.COLORS.WHITE_50};
   }
 
-  .content span {
-    font-size: clamp(24px, 5vw, 32px);
+  .contentPage span {
     display: flex;
     text-align: center;
     width: 100%;
     justify-content: center;
     color: ${({ theme }) => theme.COLORS.WHITE};
+    font-size: ${({ theme }) => theme.COLORS.FSSPAN};
   }
 `

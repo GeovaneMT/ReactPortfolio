@@ -1,6 +1,8 @@
 import React from "react"
 import { useEffect } from "react"
 
+import { Anchor } from "../../components/anchor"
+
 import { Container } from "./styles"
 import { PiCaretCircleRightThin, PiCaretCircleLeftThin } from "react-icons/pi"
 
@@ -9,11 +11,10 @@ import reactjs from "../../assets/Icons/reactjs.svg"
 import mysql from "../../assets/Icons/mysql.svg"
 import javascript from "../../assets/Icons/javascript.svg"
 
-export const Slider = ({ ...rest }) => {
+export const Slider = ({ text = "Tecnologias", ...rest }) => {
   useEffect(() => {
     const ImageSlider = () => {
       document.getElementById("next").onclick = function () {
-
         let lists = document.querySelectorAll(".item")
         let buttons = document.querySelectorAll(".buttons")
 
@@ -37,7 +38,6 @@ export const Slider = ({ ...rest }) => {
       }
 
       document.getElementById("prev").onclick = function () {
-
         let lists = document.querySelectorAll(".item")
         let buttons = document.querySelectorAll(".buttons")
 
@@ -66,6 +66,8 @@ export const Slider = ({ ...rest }) => {
 
   return (
     <Container {...rest}>
+      <Anchor text={text} />
+
       <div id="slide">
         <div className="item styled">
           <div className="content">

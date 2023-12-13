@@ -3,6 +3,7 @@ import { Container } from './styles'
 import { Anchor } from '../../components/anchor'
 import { Header } from '../../components/header'
 import { Footer } from "../../components/footer"
+import { Slider } from "../../components/slider"
 
 import certificate from "../../assets/Icons/certificate-thin.svg"
 import flask from "../../assets/Icons/flask-thin.svg"
@@ -11,10 +12,9 @@ export const Info = () => {
 
   return (
     <Container>
-      <Anchor text="Contato" />
+      <Anchor text="Sobre Mim" />
       <main>
         <Header text="Você aqui é uma grande" span="Alegria" />
-
         <div className="box">
           <Anchor text="Sobre mim" />
 
@@ -45,11 +45,11 @@ export const Info = () => {
             </p>
           </div>
         </div>
+        <Slider />
         <div className="box">
           <Anchor text="Projetos" />
-
           <div className="background">
-            <div className="content">
+            <div className="contentPage">
               <div>
                 <img src={flask} />
               </div>
@@ -58,7 +58,7 @@ export const Info = () => {
               </p>
             </div>
 
-            <div className="content">
+            <div className="contentPage">
               <div>
                 <img src={certificate} />
               </div>

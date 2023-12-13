@@ -12,4 +12,9 @@ export const Container = styled.div`
   border: 0;
   border-radius: 40px;
   margin: 0 auto;
+  filter: drop-shadow(0px 4px 4px #020f20);
+
+  svg {
+    filter: drop-shadow(0px 4px 4px #020f20);
+  }
 `

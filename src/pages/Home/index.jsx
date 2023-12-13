@@ -19,8 +19,8 @@ import profile from "../../assets/images/profile.jpg"
 export const Home = () => {
 
   return (
-    <Container className='container'>
-      <Anchor text="Contato" />
+    <Container className="container">
+      <Anchor text="Home" />
       <main className="main">
         <Header text="Olá, eu sou  " span="Geovane M.T" />
         <div className="pic">
@@ -28,19 +28,21 @@ export const Home = () => {
         </div>
         <ul>
           <li>
-            <PiUsersThree style={{ color: theme.COLORS.CYAN }} /> Engenheiro de
-            Software
+            <PiUsersThree />
+            Engenheiro de Software
           </li>
 
           <li>
-            <PiCodeBlock style={{ color: theme.COLORS.CYAN }} /> Desenv. Full
-            Stack
+            <PiCodeBlock />
+            Desenv. Full Stack
           </li>
           <li>
-            <PiGear style={{ color: theme.COLORS.CYAN }} /> UI | UX Designer
+            <PiGear />
+            UI | UX Designer
           </li>
           <li>
-            <PiBuildings style={{ color: theme.COLORS.CYAN }} /> Administrador
+            <PiBuildings />
+            Administrador
           </li>
         </ul>
         <div className="scroll">

@@ -2,7 +2,26 @@ import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
 
-* {
+  /* Width and height of the scrollbar track */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: ${({ theme }) => theme.COLORS.CYAN};
+    border: 5px solid ${({ theme }) => theme.COLORS.BACKGROUND};
+  ;
+
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: ${({ theme }) => theme.COLORS.BLUE};
+  }
+  
+  /* On hover, color of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: ${({ theme }) => theme.COLORS.CYAN};
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,24 +30,30 @@ export default createGlobalStyle`
     text-decoration: none;
     scroll-behavior: smooth;
 
-}
+  }
+
+  html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+  }
 
   body {
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
     color: ${({ theme }) => theme.COLORS.WHITE};
-
+    opacity:0;
     -webkit-font-smoothing: antialiased;
+    animation: showcontent 1s ease-in-out 1 forwards;
   }
 
   body, html, #root {
   height: 100%;
   margin: 0;
-}
+  }
 
   body, input, button, textarea {
 
     font-family: 'Plus Jakarta Sans', serif;
-    font-size: clamp(14px, 4vw, 16px);
+    font-size: ${({ theme }) => theme.COLORS.FSBODY};
     outline: none;
   }
 
@@ -49,5 +74,19 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+    @keyframes showcontent {
+    from {
+      opacity: 0;
+      transform: translate(100px, 0);
+      filter: blur(33px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate inherit;
+      filter: blur(0);
+    }
   }
 `
