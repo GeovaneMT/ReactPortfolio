@@ -13,7 +13,7 @@ export const Container = styled.div`
     inset: 0;
     background-image: url(${background});
     background-size: cover;
-    filter: grayscale(50%);
+    filter: opacity(0.5);
     z-index: -1;
   }
 
