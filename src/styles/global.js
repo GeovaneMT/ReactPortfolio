@@ -4,13 +4,11 @@ export default createGlobalStyle`
 
   /* Width and height of the scrollbar track */
   ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 1.2rem;
     background: ${({ theme }) => theme.COLORS.CYAN};
     border: 5px solid ${({ theme }) => theme.COLORS.BACKGROUND};
-  ;
-
   }
+
   ::-webkit-scrollbar-thumb {
     border-radius: 100px;
     background: ${({ theme }) => theme.COLORS.BLUE};
@@ -38,10 +36,10 @@ export default createGlobalStyle`
   }
 
   body {
+    -webkit-font-smoothing: antialiased;
+    opacity:0;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
     color: ${({ theme }) => theme.COLORS.WHITE};
-    opacity:0;
-    -webkit-font-smoothing: antialiased;
     animation: showcontent 1s ease-in-out 1 forwards;
   }
 
@@ -51,7 +49,6 @@ export default createGlobalStyle`
   }
 
   body, input, button, textarea {
-
     font-family: 'Plus Jakarta Sans', serif;
     font-size: ${({ theme }) => theme.COLORS.FSBODY};
     outline: none;

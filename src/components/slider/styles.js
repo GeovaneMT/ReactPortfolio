@@ -92,6 +92,7 @@ export const Container = styled.div`
     justify-content: space-between;
     height: 15%;
     transform: translate(-0%, -150%);
+    width: calc(100vw - 4.4rem);
   }
 
   .buttons button {
