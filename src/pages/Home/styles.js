@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import background from "../../assets/pics/BG.png"
+import background from "../../assets/images/BG.png"
 
 
 export const Container = styled.div`
@@ -7,19 +7,25 @@ export const Container = styled.div`
   height: 100%;
   overflow: hidden;
 
-  > p {
-    padding-bottom: 32px;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(${background});
+    background-size: cover;
+    filter: grayscale(50%);
+    z-index: -1;
   }
 
   > main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     height: 100%;
     overflow-y: scroll;
     padding: 0 0 120px;
-    gap: 40px;
-    overflow: hidden;
+    gap: 80px;
+    align-items: center;
+    overflow-x: hidden;
     background-image: url({background});
   }
 
@@ -31,7 +37,7 @@ export const Container = styled.div`
   }
 
   .pic img {
-    width: 50vw;
+    width: 240px;
     border-radius: 50%;
     box-shadow: -16px 16px 32px 0px #020f20;
   }
