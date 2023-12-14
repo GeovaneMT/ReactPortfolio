@@ -8,7 +8,7 @@ useEffect(() => {
   const items = document.querySelectorAll(".item")
 
   const handleItemClick = (item) => {
-    // Remove "styled" class from all items
+    // toggle "styled" class from all items
     items.forEach((otherItem) => {
       otherItem.classList.remove("styled")
       setTimeout(() => otherItem.classList.add("styled"))
