@@ -5,8 +5,12 @@ export const Container = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 12px;
-  //opacity: 0;
+  opacity: 0;
   cursor: pointer;
+
+  &.styled {
+    animation: showContent 1s ease-in-out 0.6s forwards;
+  }
 
   main {
     flex-direction: column;
@@ -14,23 +18,14 @@ export const Container = styled.div`
     text-align: left;
     padding: 0;
     color: #eee;
-    //display: none;
-
-    div {
-      opacity: 0;
-      animation: showContent 1s ease-in-out forwards;
-    }
+    transform: translateY(-250px);
+    display: none;
 
     div:nth-child(1) {
       font-size: ${({ theme }) => theme.COLORS.FSTITLE};
+      color: ${({ theme }) => theme.COLORS.CYAN};
+      justify-content: start;
       font-weight: bold;
-    }
-
-    div:nth-child(2) {
-      display: block;
-      margin: 20px 0;
-      width: 100%;
-      animation-delay: 0.2s;
     }
   }
 
@@ -45,13 +40,6 @@ export const Container = styled.div`
 
   img {
     width: 80%;
-  }
-
-  div {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
   }
 
   @keyframes showContent {

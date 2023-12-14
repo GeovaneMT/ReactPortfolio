@@ -9,35 +9,45 @@ export const Container = styled.div`
     width: max-content;
   }
 
+  > main > div:nth-child(1) > div {
+    margin: 20px 0;
+    width: 100%;
+    animation-delay: 0.2s;
+    transform: scale(1.3) translateY(-12rem);
+  }
+
+  > main > div:nth-child(1) > main {
+    display: block;
+  }
+
   .item {
-    margin: 4px;
     width: 120px;
     height: 120px;
     border-radius: 12px;
+    margin: 250px 4px 4px 4px;
     opacity: 0;
     cursor: pointer;
-
-    &:nth-child(1) {
-      margin: 250px 0 0 0;
-
-      .content {
-        display: block;
-        transform: translateY(-250px);
-      }
-
-      img {
-        transform: scale(1.3) translateY(-238px);
-      }
-    }
 
     &:nth-child(2),
     &:nth-child(3),
     &:nth-child(4) {
-      margin: 250px 0 0 0;
-
       img {
         filter: opacity(0.5);
       }
+    }
+  }
+
+  @keyframes showContent {
+    from {
+      opacity: 0;
+      transform: translate(100px, 0);
+      filter: blur(33px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
     }
   }
 `
