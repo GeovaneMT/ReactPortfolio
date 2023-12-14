@@ -39,7 +39,7 @@ export const Container = styled.div`
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 0 3.2rem 21rem;
+    padding: 0 8vw 21rem;
     gap: 80px;
     align-items: center;
     background-image: url({background});

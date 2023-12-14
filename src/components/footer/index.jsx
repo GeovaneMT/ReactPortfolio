@@ -1,12 +1,13 @@
 import React from "react"
-import theme from "../../styles/theme"
 import { useLocation } from "react-router-dom"
 
+import theme from "../../styles/theme"
 import { Container } from "./styles"
+
 import { PiHouseLine, PiInfo, PiGear, PiUser } from "react-icons/pi"
 
 export const Footer = ({
-  iconSize = "24px",
+  iconSize = "3.2rem",
   defaultIconColor = theme.COLORS.WHITE_50,
   activeIconColor = theme.COLORS.WHITE,
   ...rest
@@ -23,6 +24,8 @@ export const Footer = ({
 
   const iconStyles = {
     fontSize: iconSize,
+    filter: "drop-shadow(0px 4px 4px #020f20)",
+    // Add other styles as needed
   }
 
   return (

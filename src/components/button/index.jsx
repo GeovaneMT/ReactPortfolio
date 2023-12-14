@@ -2,10 +2,10 @@ import React from "react"
 import { Container } from "./styles"
 
 export const Button = ({
-  title = "This is a button",
+  title = "Ir Para",
   icon = "",
   loading = false,
-  iconSize = "24px",
+  iconSize = "2.4rem",
   iconColor = "white",
   ...rest
 }) => {

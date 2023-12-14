@@ -20,16 +20,13 @@ export const Contact = () => {
       <main>
         <Header text="Sinta-se a vontade para entrar em " span="Contato" />
         <div id="buttons">
-          <Button
-            title=" Whatsapp"
-            icon={<PiWhatsappLogo />} //size={} color="" weight=""
-          />
-          <Button title=" Linkedin" icon={<PiLinkedinLogo />} />
-          <Button title=" Github" icon={<PiGithubLogo />} />
-          <Button title=" Instagram" icon={<PiInstagramLogo />} />
+          <Button title=" Whatsapp" icon={<PiWhatsappLogo />} />
+          <Button icon={<PiLinkedinLogo />} title=" Linkedin" />
+          <Button icon={<PiGithubLogo />} title=" Github" />
+          <Button icon={<PiInstagramLogo />} title=" Instagram" />
         </div>
       </main>
-      <Footer iconSize="32px" iconColor="white" />
+      <Footer />
     </Container>
   )
 }

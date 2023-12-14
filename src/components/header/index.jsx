@@ -1,11 +1,8 @@
 import { Container } from "./styles"
 
-export const Header = ({ className, text = '', span = '', ...rest}) => {
+export const Header = ({ text = '', span = '', ...rest}) => {
 
-  return <Container
-  className={className}
-  {...rest}
-  >
+  return <Container {...rest} >
   {text} 
   <br />
   <span>{span}</span>

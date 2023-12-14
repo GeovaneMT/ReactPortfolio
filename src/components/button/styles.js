@@ -5,15 +5,17 @@ export const Container = styled.button`
   color: ${({ theme }) => theme.COLORS.WHITE};
 
   display: flex;
-  gap: 24px;
   align-items: center;
+
+  gap: 2.4vw;
+
   width: 75%;
-  height: 56px;
-  border: 0;
-  padding: 0 32px;
-  margin-top: 16px;
+  height: 5.6rem;
+
+  padding: 0 3.2rem;
+  margin-top: 1.6rem;
+  
   border-radius: 40px;
-  font-weight: 500;
 
   &:disabled {
     opacity: 0.5;
