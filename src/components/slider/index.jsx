@@ -1,10 +1,7 @@
-import React from "react"
-import { useEffect } from "react"
-
-import { Anchor } from "../../components/anchor"
+import React, { useEffect } from "react"
 
 import { Container } from "./styles"
-import { PiCaretCircleRightThin, PiCaretCircleLeftThin } from "react-icons/pi"
+import { Anchor } from "../../components/anchor"
 
 import node from "../../assets/Icons/node.svg"
 import reactjs from "../../assets/Icons/reactjs.svg"
@@ -12,57 +9,33 @@ import mysql from "../../assets/Icons/mysql.svg"
 import javascript from "../../assets/Icons/javascript.svg"
 
 export const Slider = ({ text = "Tecnologias", ...rest }) => {
-  useEffect(() => {
-    const ImageSlider = () => {
-      document.getElementById("next").onclick = function () {
-        let lists = document.querySelectorAll(".item")
-        let buttons = document.querySelectorAll(".buttons")
 
-        document.getElementById("slide").appendChild(lists[0])
+useEffect(() => {
 
-        buttons.forEach((buttons) => {
-          buttons.classList.remove("styledBackwards")
-          buttons.classList.remove("styled")
-          setTimeout(function () {
-            buttons.classList.add("styled")
-          })
-        })
+  const itens = document.querySelectorAll(".item")
 
-        lists.forEach((item) => {
-          item.classList.remove("styledBackwards")
-          item.classList.remove("styled")
-          setTimeout(function () {
-            item.classList.add("styled")
-          })
-        })
-      }
+  itens.forEach((item) => {
+    item.addEventListener("click", () => handleItemClick(item))
+  })
 
-      document.getElementById("prev").onclick = function () {
-        let lists = document.querySelectorAll(".item")
-        let buttons = document.querySelectorAll(".buttons")
+  const handleItemClick = (item) => {
+    const slide = document.getElementById("slide")
 
-        document.getElementById("slide").prepend(lists[lists.length - 1])
+    slide.prepend(item)
 
-        buttons.forEach((buttons) => {
-          buttons.classList.remove("styled")
-          buttons.classList.remove("styledBackwards")
-          setTimeout(function () {
-            buttons.classList.add("styledBackwards")
-          })
-        })
+    itens.forEach((item) => {
+      item.classList.remove("styled")
+      setTimeout(() => item.classList.add("styled"))
+    })
+  }
 
-        lists.forEach((item) => {
-          item.classList.remove("styled")
-          item.classList.remove("styledBackwards")
-          setTimeout(function () {
-            item.classList.add("styledBackwards")
-          })
-        })
-      }
-    }
-
-    ImageSlider() // Call the function when the component mounts
-  }, []) // Empty dependency array ensures the effect runs once after mount
+  return () => {
+    itens.forEach((item) => {
+      item.removeEventListener("click", () => handleItemClick(item))
+    })
+  }
+  
+}, [])
 
   return (
     <Container {...rest}>
@@ -122,14 +95,6 @@ export const Slider = ({ text = "Tecnologias", ...rest }) => {
             <img src={mysql} />
           </div>
         </div>
-      </div>
-      <div className="buttons styled ">
-        <button id="prev">
-          <PiCaretCircleLeftThin className="hover-button" size="80%" />
-        </button>
-        <button id="next">
-          <PiCaretCircleRightThin className="hover-button" size="80%" />
-        </button>
       </div>
     </Container>
   )
