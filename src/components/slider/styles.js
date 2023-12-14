@@ -4,6 +4,10 @@ export const Container = styled.div`
   border-radius: 20px;
   text-align: left;
 
+  p {
+    text-align: left;
+  }
+
   span {
     font-style: italic;
     color: ${({ theme }) => theme.COLORS.CYAN};
