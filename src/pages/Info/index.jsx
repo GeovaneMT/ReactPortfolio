@@ -5,9 +5,6 @@ import { Header } from "../../components/header"
 import { Footer } from "../../components/footer"
 import { Slider } from "../../components/slider"
 
-import certificate from "../../assets/Icons/certificate-thin.svg"
-import flask from "../../assets/Icons/flask-thin.svg"
-
 import anhanguera from "../../assets/Icons/anhanguera.png"
 import rocket from "../../assets/Icons/rocket.svg"
 import matera from "../../assets/Icons/matera.webp"
@@ -18,10 +15,10 @@ export const Info = () => {
       <Anchor text="Sobre Mim" />
       <main>
         <Header text="Você aqui é uma grande" span="Alegria" />
-        <div className="box">
+        <div>
           <Anchor text="Sobre mim" />
 
-          <div className="text">
+          <div>
             <span> Sua visita é muito importante para mim, obrigado! </span>
 
             <p> Sou um entusiasta por Fotografia, Carros e Games.</p>
@@ -48,71 +45,51 @@ export const Info = () => {
           </div>
         </div>
         <Slider
+          anchor="Formação"
           itemsConfig={[
             {
               icon: anhanguera,
-              title: "Custom Title 1",
-              text1: "Custom Text 1-1",
-              span1: "Custom Span 1-1",
+              title: "Eng. Software",
+              text1: "Bacharelado Anhanguera com o objetivo de ",
+              span1: "aprender todas as etapas ",
               br1: false,
-              text2: "Custom Text 1-2",
-              span2: "Custom Span 1-2",
+              text2: "do ",
+              span2: "desenvolvimento de um software.",
               br2: true,
-              text3: "Custom Text 1-3",
-              span3: "Custom Span 1-3",
+              text3: "",
+              span3: "",
               br3: true,
             },
             {
               icon: rocket,
-              title: "Custom Title 2",
-              text1: "Custom Text 2-1",
-              span1: "Custom Span 2-1",
+              title: "Rocketseat",
+              text1: "Bootcamp de 1 ano ensinando ",
+              span1: "Programação baseada em JS. ",
               br1: true,
-              text2: "Custom Text 2-2",
-              span2: "Custom Span 2-2",
+              text2: "Isso inclúi: ",
+              span2:
+                "Javascript, React, Node, SQL, Frameworks e bibliotecas JS ",
               br2: false,
-              text3: "Custom Text 2-3",
-              span3: "Custom Span 2-3",
+              text3: "",
+              span3: "",
               br3: false,
             },
             {
               icon: matera,
-              title: "Custom Title 3",
-              text1: "Custom Text 3-1",
-              span1: "Custom Span 3-1",
+              title: "Matera Camp",
+              text1:
+                "Bootcamp da Matera de 1 semana, com o objetivo de ensinar sobre ",
+              span1: "Segurança da Informação ",
               br1: false,
-              text2: "Custom Text 3-2",
-              span2: "Custom Span 3-2",
+              text2: "e ",
+              span2: "Cloud ",
               br2: true,
-              text3: "Custom Text 3-3",
-              span3: "Custom Span 3-3",
+              text3: "",
+              span3: "",
               br3: true,
             },
           ]}
         />
-
-        <div className="box">
-          <Anchor text="Projetos" />
-          <div className="background">
-            <div className="contentPage">
-              <div>
-                <img src={flask} />
-              </div>
-              <p>
-                <span>+2</span>Cursos de dev. em andamento
-              </p>
-            </div>
-
-            <div className="contentPage">
-              <div>
-                <img src={certificate} />
-              </div>
-              <p>
-                <span>+8</span>Projetos pessoais e educativos
-              </p>
-            </div>
-          </div>
-        </div>
       </main>
       <Footer iconSize="32px" iconColor="white" />
     </Container>

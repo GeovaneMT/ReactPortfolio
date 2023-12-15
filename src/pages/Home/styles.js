@@ -43,18 +43,11 @@ export const Container = styled.div`
     gap: 80px;
     align-items: center;
     background-image: url({background});
-  }
 
-  > div {
-    position: fixed;
-    bottom: 32px;
-    transform: translateX(-50%);
-    left: 50%;
-  }
-
-  .pic img {
-    width: 240px;
-    border-radius: 50%;
-    box-shadow: -16px 16px 32px 0px #020f20;
+    div > img {
+      width: 240px;
+      border-radius: 50%;
+      box-shadow: -16px 16px 32px 0px #020f20;
+    }
   }
 `

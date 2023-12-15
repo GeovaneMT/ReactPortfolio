@@ -17,11 +17,4 @@ export const Container = styled.div`
     padding: 0 8vw 21rem;
     gap: 80px;
   }
-
-  > div {
-    position: fixed;
-    bottom: 32px;
-    transform: translateX(-50%);
-    left: 50%;
-  }
 `
