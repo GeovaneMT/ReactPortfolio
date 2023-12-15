@@ -10,20 +10,24 @@ export const Container = styled.div`
   }
 
   > main > div:nth-child(1) > div {
-    margin: 20px 0;
-    width: 100%;
     animation-delay: 0.2s;
-    transform: scale(1.3) translateY(-12rem);
+    transform: scale(1.3) translateY(-13.5rem);
+  }
+
+  > main > div > div {
+    display: flex;
+    place-content: center;
   }
 
   > main > div:nth-child(1) > main {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
 
   .item {
     width: 120px;
     height: 120px;
-    border-radius: 12px;
     margin: 250px 4px 4px 4px;
     opacity: 0;
     cursor: pointer;

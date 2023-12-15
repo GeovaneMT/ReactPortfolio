@@ -2,9 +2,6 @@ import styled, { keyframes } from "styled-components"
 
 export const Container = styled.div`
   margin: 4px;
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
   opacity: 0;
   cursor: pointer;
 
@@ -13,11 +10,7 @@ export const Container = styled.div`
   }
 
   main {
-    flex-direction: column;
     width: 300px;
-    text-align: left;
-    padding: 0;
-    color: #eee;
     transform: translateY(-250px);
     display: none;
 

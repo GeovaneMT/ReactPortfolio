@@ -1,5 +1,7 @@
 import React from "react" // Import React
+
 import { Container } from "./styles"
+
 import reactjs from "../../assets/Icons/reactjs.svg"
 
 export const Item = ({
