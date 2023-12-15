@@ -1,15 +1,18 @@
-import { Container } from './styles'
+import { Container } from "./styles"
 
-import { Anchor } from '../../components/anchor'
-import { Header } from '../../components/header'
+import { Anchor } from "../../components/anchor"
+import { Header } from "../../components/header"
 import { Footer } from "../../components/footer"
 import { Slider } from "../../components/slider"
 
 import certificate from "../../assets/Icons/certificate-thin.svg"
 import flask from "../../assets/Icons/flask-thin.svg"
 
-export const Info = () => {
+import anhanguera from "../../assets/Icons/anhanguera.png"
+import rocket from "../../assets/Icons/rocket.svg"
+import matera from "../../assets/Icons/matera.webp"
 
+export const Info = () => {
   return (
     <Container>
       <Anchor text="Sobre Mim" />
@@ -34,7 +37,6 @@ export const Info = () => {
             </p>
 
             <p>
-              {" "}
               Também estudo ferramentas e métodos de UI | UX design: Design
               Thinking, Figma, Notion e Photoshop.
             </p>
@@ -45,7 +47,50 @@ export const Info = () => {
             </p>
           </div>
         </div>
-        <Slider />
+        <Slider
+          itemsConfig={[
+            {
+              icon: anhanguera,
+              title: "Custom Title 1",
+              text1: "Custom Text 1-1",
+              span1: "Custom Span 1-1",
+              br1: false,
+              text2: "Custom Text 1-2",
+              span2: "Custom Span 1-2",
+              br2: true,
+              text3: "Custom Text 1-3",
+              span3: "Custom Span 1-3",
+              br3: true,
+            },
+            {
+              icon: rocket,
+              title: "Custom Title 2",
+              text1: "Custom Text 2-1",
+              span1: "Custom Span 2-1",
+              br1: true,
+              text2: "Custom Text 2-2",
+              span2: "Custom Span 2-2",
+              br2: false,
+              text3: "Custom Text 2-3",
+              span3: "Custom Span 2-3",
+              br3: false,
+            },
+            {
+              icon: matera,
+              title: "Custom Title 3",
+              text1: "Custom Text 3-1",
+              span1: "Custom Span 3-1",
+              br1: false,
+              text2: "Custom Text 3-2",
+              span2: "Custom Span 3-2",
+              br2: true,
+              text3: "Custom Text 3-3",
+              span3: "Custom Span 3-3",
+              br3: true,
+            },
+          ]}
+        />
+
         <div className="box">
           <Anchor text="Projetos" />
           <div className="background">

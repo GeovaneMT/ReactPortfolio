@@ -18,9 +18,26 @@ export const Container = styled.div`
     transform: scale(1.3) translateY(-13.5rem);
   }
 
+  > main > div:nth-child(2) > div,
+  > main > div:nth-child(3) > div,
+  > main > div:nth-child(4) > div {
+    filter: opacity(0.5);
+    margin-left: 2rem;
+  }
+
+  > main > div:nth-child(1) > div, 
+  > main > div:nth-child(2) > div, 
+  > main > div:nth-child(3) > div,
+  > main > div:nth-child(4) > div { 
+    border-radius: 20px;
+  }
+
   > main > div > div {
     display: flex;
     place-content: center;
+    width: 12rem;
+    height: 12rem;
+    border: 2px solid white;
   }
 
   > main > div:nth-child(1) > main {
@@ -30,19 +47,11 @@ export const Container = styled.div`
   }
 
   .item {
-    width: 120px;
-    height: 120px;
-    margin: 250px 4px 4px 4px;
+    width: 12rem;
+    height: 12rem;
+    margin: 25rem 4px 4px 4px;
     opacity: 0;
     cursor: pointer;
-
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      img {
-        filter: opacity(0.5);
-      }
-    }
   }
 
   @keyframes showContent {

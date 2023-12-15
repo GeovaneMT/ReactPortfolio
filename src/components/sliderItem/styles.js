@@ -33,6 +33,7 @@ export const Container = styled.div`
 
   img {
     width: 80%;
+    object-fit: contain;
   }
 
   @keyframes showContent {
