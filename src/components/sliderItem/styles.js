@@ -8,7 +8,6 @@ export const Container = styled.div`
     height: 12rem;
     border-radius: 20px;
     border: 2px solid white;
-    opacity: 0;
     transition: all 0.3s ease-in-out;
 
     &:hover {
@@ -27,7 +26,7 @@ export const Container = styled.div`
     }
 
     > div {
-      animation: showContent 0.4s 0.8s ease-in-out forwards;
+      animation: showbtn 0.4s ease-in-out forwards;
     }
   }
 
@@ -73,6 +72,16 @@ export const Container = styled.div`
     to {
       opacity: 1;
       transform: translateX(inherit);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes showbtn {
+    from {
+      filter: blur(33px);
+    }
+
+    to {
       filter: blur(0);
     }
   }

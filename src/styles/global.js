@@ -37,10 +37,63 @@ export default createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
-    opacity:0;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
     color: ${({ theme }) => theme.COLORS.WHITE};
-    animation: showcontent 1s ease-in-out 1 forwards;
+
+    > div > div {
+
+      > :nth-child(1) {
+        animation: showContent .4s ease-in-out forwards;
+        opacity: 0;
+      }
+      > :nth-child(2) {
+        animation: showContent .4s .4s ease-in-out forwards;
+        opacity: 0;
+      }
+      > :nth-child(3) {
+        animation: showContent .4s .8s ease-in-out forwards;
+        opacity: 0;
+      }
+      > :nth-child(4) {
+        animation: showContent .4s 1.2s ease-in-out forwards;
+        opacity: 0;
+      }
+      > :nth-child(4) {
+        animation: showContent .4s 1.2s ease-in-out forwards;
+        opacity: 0;
+      }
+      > :nth-child(5) {
+        animation: showContent .4s 1.6s ease-in-out forwards;
+        opacity: 0;
+      }
+
+      main {
+        > :nth-child(1) {
+          animation: showContent .4s ease-in-out forwards;
+          opacity: 0;
+        }
+        > :nth-child(2) {
+          animation: showContent .4s .4s ease-in-out forwards;
+          opacity: 0;
+        }
+        > :nth-child(3) {
+          animation: showContent .4s .8s ease-in-out forwards;
+          opacity: 0;
+        }
+        > :nth-child(4) {
+          animation: showContent .4s 1.2s ease-in-out forwards;
+          opacity: 0;
+        }
+        > :nth-child(4) {
+          animation: showContent .4s 1.2s ease-in-out forwards;
+          opacity: 0;
+        }
+        > :nth-child(5) {
+          animation: showContent .4s 1.6s ease-in-out forwards;
+          opacity: 0;
+        }
+      }
+    }
   }
 
   body, html, #root {
@@ -71,19 +124,5 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-    @keyframes showcontent {
-    from {
-      opacity: 0;
-      transform: translate(100px, 0);
-      filter: blur(33px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translate inherit;
-      filter: blur(0);
-    }
   }
 `
