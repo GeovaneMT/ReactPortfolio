@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 export const Container = styled.div`
   border-radius: 20px;
@@ -16,7 +16,6 @@ export const Container = styled.div`
       pointer-events: none;
 
       > div {
-        animation-delay: 0.2s;
         transform: scale(1.3) translateY(-13.5rem);
       }
 
@@ -45,21 +44,6 @@ export const Container = styled.div`
     width: 12rem;
     height: 12rem;
     margin: 25rem 1.4rem 1.4rem 1.4rem;
-    opacity: 0;
     cursor: pointer;
-  }
-
-  @keyframes showContent {
-    from {
-      opacity: 0;
-      transform: translate(100px, 0);
-      filter: blur(33px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateX(0);
-      filter: blur(0);
-    }
   }
 `
