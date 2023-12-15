@@ -20,27 +20,13 @@ export const Info = () => {
 
           <div>
             <span> Sua visita é muito importante para mim, obrigado! </span>
-
+            <br />
+            <br />
             <p> Sou um entusiasta por Fotografia, Carros e Games.</p>
-
+            <br />
             <p>
-              Atualmente estou cursando Engenharia de Software na Anhanguera, e
-              Desenvolvimento Full Stack na Rocketseat:
-            </p>
-
-            <p>
-              Venho estudando tecnologias Full Stack como: JavaScript, Node,
-              React, API Restful, & Base de dados.
-            </p>
-
-            <p>
-              Também estudo ferramentas e métodos de UI | UX design: Design
-              Thinking, Figma, Notion e Photoshop.
-            </p>
-
-            <p>
-              Bem como técnicas de administração e análise de dados: Scrum,
-              Kanbam, Power BI, Bling ERP & Canvas.
+              Atualmente estou cursando <span>Engenharia de Software</span> na
+              Anhanguera, e <span>Desenvolvimento Full Stack</span> na Rocketseat:
             </p>
           </div>
         </div>

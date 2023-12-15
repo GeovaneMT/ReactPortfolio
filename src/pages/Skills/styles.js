@@ -16,5 +16,21 @@ export const Container = styled.div`
     overflow-y: auto;
     padding: 0 8vw 21rem;
     gap: 80px;
+
+    > div:nth-child(2),
+    > div:nth-child(3),
+    > div:nth-child(4) {
+      flex-direction: column;
+    border-radius: 20px;
+    display: flex;
+    gap: 12px;
+    padding: 8%;
+    border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
+      span {
+      font-weight: bold;
+      font-size: ${({ theme }) => theme.COLORS.FSSPAN};
+      color: ${({ theme }) => theme.COLORS.CYAN};
+      }
+    }
   }
 `

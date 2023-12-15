@@ -12,7 +12,33 @@ export const Skills = () => {
       <Anchor text="Habilidades" />
       <main>
         <Header text="Aqui estão minhas  " span="Habilidades" />
+        <div>
+          <span>Venho estudando tecnologias Full Stack:</span>
+          <p>JavaScript, Node, React, API Restful, & Base de dados.</p>
+        </div>
+
+        <div>
+          <p>
+            <span>Também estudo ferramentas UI | UX:</span>
+            <br />
+            <br />
+            Design Thinking, Figma, Notion e Photoshop.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <span>Bem como técnicas de análise de dados:</span>
+            <br />
+            <br />
+            Scrum, Kanbam, Power BI, Bling ERP & Canvas.
+          </p>
+        </div>
+
         <Slider />
+        <Slider />
+        <Slider />
+
       </main>
       <Footer iconSize="32px" iconColor="white" />
     </Container>

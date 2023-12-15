@@ -24,18 +24,21 @@ export const Container = styled.div`
     text-align: left;
   }
 
-  & > main > div > div {
+  > main > div:nth-child(2),
+  > main > div:nth-child(4),
+  > main > div:nth-child(6),
+  > main > div:nth-child(8) {
     flex-direction: column;
     border-radius: 20px;
     display: flex;
     gap: 12px;
     padding: 8%;
     border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
-  }
 
-  & > main > div > div > span {
-    font-weight: bold;
-    font-size: ${({ theme }) => theme.COLORS.FSSPAN};
-    color: ${({ theme }) => theme.COLORS.CYAN};
+    span {
+      font-weight: bold;
+      font-size: ${({ theme }) => theme.COLORS.FSSPAN};
+      color: ${({ theme }) => theme.COLORS.CYAN};
+    }
   }
 `

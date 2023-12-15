@@ -1,10 +1,7 @@
-import React, { useEffect } from "react"
-
+import React, { useEffect, useRef } from "react"
 import { Container } from "./styles"
-
 import { Anchor } from "../../components/anchor"
 import { Item } from "../../components/sliderItem"
-
 import reactjs from "../../assets/Icons/reactjs.svg"
 import node from "../../assets/Icons/node.svg"
 import mysql from "../../assets/Icons/mysql.svg"
@@ -70,32 +67,32 @@ export const Slider = ({
   ],
   ...rest
 }) => {
+  const mainRef = useRef(null)
+
   useEffect(() => {
-    const items = document.querySelectorAll(".item")
+    const sliderItems = mainRef.current.querySelectorAll(".item")
 
     const handleItemClick = (item, config) => {
-      const main = document.querySelectorAll(".main")
+      if (mainRef.current) {
+        mainRef.current.prepend(item)
 
-      main.forEach((slide) => {
-        slide.prepend(item)
-      })
-
-      items.forEach((otherItem) => {
-        otherItem.classList.remove("styled")
-        setTimeout(() => otherItem.classList.add("styled"), 0)
-      })
+        sliderItems.forEach((otherItem) => {
+          otherItem.classList.remove("styled")
+          setTimeout(() => otherItem.classList.add("styled"), 0)
+        })
+      }
     }
 
     const itemClickHandler = (item, index) => () => {
       handleItemClick(item, itemsConfig[index])
     }
 
-    items.forEach((item, index) => {
+    sliderItems.forEach((item, index) => {
       item.addEventListener("click", itemClickHandler(item, index))
     })
 
     return () => {
-      items.forEach((item, index) => {
+      sliderItems.forEach((item, index) => {
         item.removeEventListener("click", itemClickHandler(item, index))
       })
     }
@@ -105,7 +102,7 @@ export const Slider = ({
     <Container {...rest}>
       <Anchor text={anchor} />
 
-      <main className="main">
+      <main className="main" ref={mainRef}>
         {itemsConfig.map((config, index) => (
           <Item key={index} className="item styled" {...config} />
         ))}

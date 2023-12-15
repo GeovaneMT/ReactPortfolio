@@ -36,6 +36,7 @@ export const Container = styled.div`
     }
 
     div:hover > div {
+      transform: scale(1.3) translateY(inherit);
       filter: opacity(1);
     }
   }
