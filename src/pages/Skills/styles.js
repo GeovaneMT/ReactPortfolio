@@ -18,8 +18,8 @@ export const Container = styled.div`
     gap: 80px;
 
     > div:nth-child(2),
-    > div:nth-child(3),
-    > div:nth-child(4) {
+    > div:nth-child(4),
+    > div:nth-child(6) {
       flex-direction: column;
     border-radius: 20px;
     display: flex;

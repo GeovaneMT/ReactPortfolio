@@ -17,6 +17,8 @@ export const Skills = () => {
           <p>JavaScript, Node, React, API Restful, & Base de dados.</p>
         </div>
 
+        <Slider />
+
         <div>
           <p>
             <span>Também estudo ferramentas UI | UX:</span>
@@ -26,6 +28,8 @@ export const Skills = () => {
           </p>
         </div>
 
+        <Slider />
+        
         <div>
           <p>
             <span>Bem como técnicas de análise de dados:</span>
@@ -36,9 +40,6 @@ export const Skills = () => {
         </div>
 
         <Slider />
-        <Slider />
-        <Slider />
-
       </main>
       <Footer iconSize="32px" iconColor="white" />
     </Container>
