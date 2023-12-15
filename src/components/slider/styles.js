@@ -4,6 +4,10 @@ export const Container = styled.div`
   border-radius: 20px;
   text-align: left;
 
+  > p {
+    text-align: left;
+  }
+
   main {
     display: flex;
     width: max-content;
