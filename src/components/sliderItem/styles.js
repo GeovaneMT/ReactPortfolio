@@ -82,7 +82,7 @@ export const Container = styled.div`
     }
 
     to {
-      filter: blur(0);
+      filter: blur(inherit);
     }
   }
 `
