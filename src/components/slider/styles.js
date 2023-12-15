@@ -12,21 +12,14 @@ export const Container = styled.div`
     display: flex;
     width: max-content;
 
-    > div > div {
-      display: flex;
-      place-content: center;
-      width: 12rem;
-      height: 12rem;
-      border-radius: 20px;
-      border: 2px solid white;
-    }
-
     > div:nth-child(1) {
       pointer-events: none;
+
       > div {
         animation-delay: 0.2s;
         transform: scale(1.3) translateY(-13.5rem);
       }
+
       > main {
         display: flex;
         flex-direction: column;
@@ -34,18 +27,24 @@ export const Container = styled.div`
       }
     }
 
-    > div:nth-child(2) > div,
-    > div:nth-child(3) > div,
-    > div:nth-child(4) > div {
-      filter: opacity(0.5);
-      margin-left: 2rem;
+    > div:nth-child(2),
+    > div:nth-child(3),
+    > div:nth-child(4) {
+      > div {
+        filter: opacity(0.5);
+        margin-left: 2rem;
+      }
+    }
+
+    div:hover > div {
+      filter: opacity(1);
     }
   }
 
   .item {
     width: 12rem;
     height: 12rem;
-    margin: 25rem 4px 4px 4px;
+    margin: 25rem 1.4rem 1.4rem 1.4rem;
     opacity: 0;
     cursor: pointer;
   }

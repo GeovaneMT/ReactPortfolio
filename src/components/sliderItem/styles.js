@@ -1,9 +1,19 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 export const Container = styled.div`
-  margin: 4px;
-  opacity: 0;
-  cursor: pointer;
+  > div {
+    display: flex;
+    place-content: center;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
 
   &.styled {
     animation: showContent 1s ease-in-out 0.6s forwards;
