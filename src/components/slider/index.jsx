@@ -60,7 +60,7 @@ export const Slider = ({
       text2: "e ",
       span2: "Node ",
       br2: false,
-      text3: "",
+      text3: "Essenciais para desenvolver apps",
       span3: "",
       br3: false,
     },

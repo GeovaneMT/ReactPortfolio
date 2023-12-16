@@ -12,7 +12,7 @@ export const Container = styled.div`
     display: flex;
     width: max-content;
 
-    > div:nth-child(1) {
+    > div:first-child {
       pointer-events: none;
 
       > div {
@@ -26,9 +26,7 @@ export const Container = styled.div`
       }
     }
 
-    > div:nth-child(2),
-    > div:nth-child(3),
-    > div:nth-child(4) {
+    > div:not(:first-child) {
       > div {
         filter: opacity(0.5);
         margin-left: 2rem;
