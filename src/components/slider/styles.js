@@ -28,6 +28,7 @@ export const Container = styled.div`
 
     > div:not(:first-child) {
       > div {
+        
         filter: opacity(0.5);
         margin-left: 2rem;
       }
