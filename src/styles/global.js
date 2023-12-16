@@ -58,16 +58,12 @@ export default createGlobalStyle`
         animation: showContent .4s 1.2s ease-in-out forwards;
         opacity: 0;
       }
-      > :nth-child(4) {
-        animation: showContent .4s 1.2s ease-in-out forwards;
-        opacity: 0;
-      }
       > :nth-child(5) {
         animation: showContent .4s 1.6s ease-in-out forwards;
         opacity: 0;
       }
 
-      main {
+      > main {
         > :nth-child(1) {
           animation: showContent .4s ease-in-out forwards;
           opacity: 0;
@@ -78,10 +74,6 @@ export default createGlobalStyle`
         }
         > :nth-child(3) {
           animation: showContent .4s .8s ease-in-out forwards;
-          opacity: 0;
-        }
-        > :nth-child(4) {
-          animation: showContent .4s 1.2s ease-in-out forwards;
           opacity: 0;
         }
         > :nth-child(4) {

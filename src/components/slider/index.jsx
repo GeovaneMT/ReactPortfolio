@@ -67,19 +67,33 @@ export const Slider = ({
   ],
   ...rest
 }) => {
+
   const mainRef = useRef(null)
 
   useEffect(() => {
     const sliderItems = mainRef.current.querySelectorAll(".item")
 
     const handleItemClick = (item, config) => {
-      if (mainRef.current) {
-        mainRef.current.prepend(item)
 
-        sliderItems.forEach((otherItem) => {
-          otherItem.classList.remove("styled")
-          setTimeout(() => otherItem.classList.add("styled"), 0)
+      // Remove the "styled" class from all items
+      sliderItems.forEach((item) => {
+        item.classList.remove("styled")
+      })
+
+      // Use setTimeout with a delay of 0 to add the "styled" class back to the clicked item
+      setTimeout(() => {
+        sliderItems.forEach((item) => {
+          item.classList.add("styled")
         })
+      }, 0)
+
+      if (mainRef.current) {
+        const firstItem = mainRef.current.querySelector(".item")
+
+        if (firstItem && firstItem !== item) {
+          mainRef.current.insertBefore(item, firstItem)
+          mainRef.current.append(firstItem)
+        }
       }
     }
 

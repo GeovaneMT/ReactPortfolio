@@ -10,6 +10,7 @@ export const Container = styled.div`
     border-radius: 20px;
     border: 2px solid white;
     transition: all 0.3s ease-in-out;
+    opacity: 0;
   }
 
   &.styled {
@@ -18,12 +19,13 @@ export const Container = styled.div`
         animation: showContent 0.4s ease-in-out forwards;
       }
       div:nth-child(2) {
-        animation: showContent 0.4s 0.4s ease-in-out forwards;
+        animation: showContent 0.4s 0.2s ease-in-out forwards;
       }
     }
 
     > div {
-      animation: showbtn 0.4s ease-in-out forwards;
+      opacity: 0;
+      animation: showbtn 0.4s 0.4s ease-in-out forwards;
     }
   }
 
@@ -77,10 +79,12 @@ export const Container = styled.div`
   @keyframes showbtn {
     from {
       filter: blur(33px);
+      opacity: 0;
     }
 
     to {
       filter: blur(inherit);
+      opacity: 1;
     }
   }
 `
