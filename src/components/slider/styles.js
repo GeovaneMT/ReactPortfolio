@@ -33,11 +33,11 @@ export const Container = styled.div`
         filter: opacity(0.5);
         margin-left: 2rem;
       }
-    }
 
-    div:hover > div {
-      transform: scale(1.3) translateY(inherit);
-      filter: opacity(1);
+      &:hover > div {
+        transform: scale(1.3);
+        filter: opacity(1);
+      }
     }
   }
 

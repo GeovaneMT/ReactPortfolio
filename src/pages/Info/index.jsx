@@ -26,7 +26,8 @@ export const Info = () => {
             <br />
             <p>
               Atualmente estou cursando <span>Engenharia de Software</span> na
-              Anhanguera, e <span>Desenvolvimento Full Stack</span> na Rocketseat:
+              Anhanguera, e <span>Desenvolvimento Full Stack</span> na
+              Rocketseat:
             </p>
           </div>
         </div>
@@ -36,8 +37,8 @@ export const Info = () => {
             {
               icon: anhanguera,
               title: "Eng. Software",
-              text1: "Bacharelado Anhanguera com o objetivo de ",
-              span1: "aprender todas as etapas ",
+              text1: "Bacharelado Anhanguera com o objetivo de aprender ",
+              span1: "todas as etapas ",
               br1: false,
               text2: "do ",
               span2: "desenvolvimento de um software.",
@@ -49,7 +50,7 @@ export const Info = () => {
             {
               icon: rocket,
               title: "Rocketseat",
-              text1: "Bootcamp de 1 ano ensinando ",
+              text1: "Bootcamp de 1 ano aprendendo ",
               span1: "Programação baseada em JS. ",
               br1: true,
               text2: "Isso inclúi: ",
@@ -64,7 +65,7 @@ export const Info = () => {
               icon: matera,
               title: "Matera Camp",
               text1:
-                "Bootcamp da Matera de 1 semana, com o objetivo de ensinar sobre ",
+                "Bootcamp da Matera de 1 semana, com o objetivo de aprender sobre ",
               span1: "Segurança da Informação ",
               br1: false,
               text2: "e ",

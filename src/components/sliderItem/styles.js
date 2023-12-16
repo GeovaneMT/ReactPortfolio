@@ -4,6 +4,7 @@ export const Container = styled.div`
   > div {
     display: flex;
     place-content: center;
+    align-items: center;
     width: 12rem;
     height: 12rem;
     border-radius: 20px;
@@ -55,6 +56,7 @@ export const Container = styled.div`
 
   img {
     width: 80%;
+    height: 80%;
     object-fit: contain;
   }
 
