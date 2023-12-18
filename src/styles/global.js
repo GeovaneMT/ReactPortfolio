@@ -15,7 +15,6 @@ const showContent = keyframes`
 `
 
 export default createGlobalStyle`
-  /* Width and height of the scrollbar track */
   ::-webkit-scrollbar {
     width: 1.2rem;
     background: ${({ theme }) => theme.COLORS.CYAN};
@@ -27,7 +26,6 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.COLORS.BLUE};
   }
 
-  /* On hover, color of the scrollbar thumb */
   ::-webkit-scrollbar-thumb:hover {
     background-color: ${({ theme }) => theme.COLORS.CYAN};
   }

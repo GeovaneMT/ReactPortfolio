@@ -5,7 +5,8 @@ const showContent = keyframes`
     filter: blur(33px);
   }
   to {
-    filter: blur(0);
+    opacity: 1;
+    filter: blur(0) opacity(inherit);
   }
 `
 
@@ -46,6 +47,7 @@ export const Container = styled.div`
     border: 2px solid white;
     transition: all 0.3s ease-in-out;
     filter: opacity(0.5);
+    opacity:0;
     margin-left: 2rem;
 
     &:hover {
