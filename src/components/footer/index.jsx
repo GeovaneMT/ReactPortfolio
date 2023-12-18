@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { useLocation, Link } from "react-router-dom"
 
@@ -23,8 +23,37 @@ export const Footer = ({ active, ...rest }) => {
 
   const currentLocation = useLocation().pathname
 
+  useEffect(() => {
+    const barra = document.querySelector(".barra")
+    const main = document.querySelector("main")
+
+    if (barra && main) {
+      let lastScrollPosition = main.scrollTop
+
+      const handleScroll = () => {
+        const goingUp = main.scrollTop < lastScrollPosition
+        const atBottom =
+          main.scrollHeight - main.scrollTop === main.clientHeight
+
+        if (goingUp || atBottom) {
+          barra.classList.remove("hide")
+          barra.classList.add("show")
+        } else {
+          barra.classList.remove("show")
+          barra.classList.add("hide")
+        }
+
+        lastScrollPosition = main.scrollTop
+      }
+
+      main.addEventListener("scroll", handleScroll)
+
+      return () => main.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <Container>
+    <Container className="barra">
       {icons.map(({ icon, link }, index) => (
         <Link key={index} to={link}>
           <FooterIcon $active={currentLocation === link ? "true" : "false"}>

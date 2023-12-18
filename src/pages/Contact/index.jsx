@@ -1,8 +1,8 @@
-import { Container } from './styles'
+import { Container } from "./styles"
 
-import { Anchor } from '../../components/anchor'
-import { Header } from '../../components/header'
-import { Button } from '../../components/button'
+import { Anchor } from "../../components/anchor"
+import { Header } from "../../components/header"
+import { Button } from "../../components/button"
 import { Footer } from "../../components/footer"
 
 import {
@@ -13,17 +13,22 @@ import {
 } from "react-icons/pi"
 
 export const Contact = () => {
+  const socialButtons = [
+    { icon: <PiWhatsappLogo   />, title: " Whatsapp" },
+    { icon: <PiLinkedinLogo   />, title: " Linkedin" },
+    { icon: <PiGithubLogo     />, title: " Github" },
+    { icon: <PiInstagramLogo  />, title: " Instagram" },
+  ]
 
   return (
     <Container>
       <Anchor text="Contato" />
       <main>
-        <Header text="Sinta-se a vontade para entrar em " span="Contato" />
+        <Header text="Sinta-se à vontade para entrar em " span="Contato" />
         <div id="buttons">
-          <Button title=" Whatsapp" icon={<PiWhatsappLogo />} />
-          <Button icon={<PiLinkedinLogo />} title=" Linkedin" />
-          <Button icon={<PiGithubLogo />} title=" Github" />
-          <Button icon={<PiInstagramLogo />} title=" Instagram" />
+          {socialButtons.map((button, index) => (
+            <Button key={index} icon={button.icon} title={button.title} />
+          ))}
         </div>
       </main>
       <Footer />

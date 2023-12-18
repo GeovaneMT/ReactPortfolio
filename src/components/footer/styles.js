@@ -1,4 +1,27 @@
 import styled from "styled-components"
+import { keyframes } from "styled-components"
+
+const showContent = keyframes`
+  from {
+    opacity: 0;
+    transform: translate(-50%, 200%)
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0%)
+  }
+`
+
+const hideContent = keyframes`
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0%)
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 200%)
+  }
+`
 
 export const Container = styled.div`
   background: ${({ theme }) => theme.COLORS.BLUE};
@@ -15,6 +38,16 @@ export const Container = styled.div`
   padding: 1.6rem 3.2rem;
   border-radius: 4rem;
   filter: drop-shadow(0px 4px 4px #020f20);
+
+  &.show {
+    opacity: 1;
+    animation: ${showContent} 0.3s ease-in-out;
+  }
+
+  &.hide {
+    opacity: 0;
+    animation: ${hideContent} 0.3s ease-in-out;
+  }
 
   svg {
     filter: drop-shadow(0px 4px 4px #020f20);
