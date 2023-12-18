@@ -8,7 +8,7 @@ import mysql from "../../assets/Icons/mysql.svg"
 import javascript from "../../assets/Icons/javascript.svg"
 
 export const Slider = ({
-  anchor = "Tecnologias",
+  anchor = "Tecnologias:",
   itemsConfig = [
     {
       icon: reactjs,

@@ -22,23 +22,19 @@ export const Container = styled.div`
 
   & > main > div > p {
     text-align: left;
+    > span {
+      font-weight: bold;
+      font-size: ${({ theme }) => theme.COLORS.FSSPAN};
+      color: ${({ theme }) => theme.COLORS.CYAN};
+    }
   }
 
-  > main > div:nth-child(2),
-  > main > div:nth-child(4),
-  > main > div:nth-child(6),
-  > main > div:nth-child(8) {
+  > main > div:nth-child(2){
     flex-direction: column;
     border-radius: 20px;
     display: flex;
     gap: 12px;
     padding: 8%;
     border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
-
-    span {
-      font-weight: bold;
-      font-size: ${({ theme }) => theme.COLORS.FSSPAN};
-      color: ${({ theme }) => theme.COLORS.CYAN};
-    }
   }
 `

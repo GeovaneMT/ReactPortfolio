@@ -15,22 +15,20 @@ export const Info = () => {
       <Anchor text="Sobre Mim" />
       <main>
         <Header text="Você aqui é uma grande" span="Alegria" />
-        <div>
-          <Anchor text="Sobre mim" />
-
           <div>
-            <span> Sua visita é muito importante para mim, obrigado! </span>
-            <br />
-            <br />
-            <p> Sou um entusiasta por Fotografia, Carros e Games.</p>
-            <br />
+          <Anchor text="Sobre mim" />
+            <p>
+              <span> Sua visita é muito importante para mim, obrigado! </span>
+              <br />
+              <br />
+              Sou um entusiasta por Fotografia, Carros e Games.
+            </p>
             <p>
               Atualmente estou cursando <span>Engenharia de Software</span> na
               Anhanguera, e <span>Desenvolvimento Full Stack</span> na
               Rocketseat:
             </p>
           </div>
-        </div>
         <Slider
           anchor="Formação"
           itemsConfig={[

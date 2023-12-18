@@ -38,26 +38,6 @@ export const Container = styled.div`
         filter: opacity(1);
       }
     }
-
-    &.styled {
-
-      > div:nth-child(2) {
-        animation: showbtn 0.4s 0.6s ease-in-out forwards;
-        
-      }
-      > div:nth-child(3) {
-        animation: showbtn 0.4s 0.8s ease-in-out forwards;
-        
-      }
-      > div:nth-child(4) {
-        animation: showbtn 0.4s 1s ease-in-out forwards;
-        
-      }
-      > div:nth-child(5) {
-        animation: showbtn 0.4s 1.2 ease-in-out forwards;
-        
-      }
-    }
   }
 
   .item {

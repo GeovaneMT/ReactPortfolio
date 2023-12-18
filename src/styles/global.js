@@ -40,52 +40,28 @@ export default createGlobalStyle`
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
     color: ${({ theme }) => theme.COLORS.WHITE};
 
-    > div > div {
+    > div > div,
+    > div > div > main {
 
-      > :nth-child(1) {
+      > * {
+        opacity: 0;
         animation: showContent .4s ease-in-out forwards;
-        opacity: 0;
       }
+
       > :nth-child(2) {
-        animation: showContent .4s .4s ease-in-out forwards;
-        opacity: 0;
+        animation-delay: 0.2s;
       }
       > :nth-child(3) {
-        animation: showContent .4s .8s ease-in-out forwards;
-        opacity: 0;
+        animation-delay: 0.4s;
       }
       > :nth-child(4) {
-        animation: showContent .4s 1.2s ease-in-out forwards;
-        opacity: 0;
+        animation-delay: 0.6s;
       }
       > :nth-child(5) {
-        animation: showContent .4s 1.6s ease-in-out forwards;
-        opacity: 0;
-      }
-
-      > main {
-        > :nth-child(1) {
-          animation: showContent .4s ease-in-out forwards;
-          opacity: 0;
-        }
-        > :nth-child(2) {
-          animation: showContent .4s .4s ease-in-out forwards;
-          opacity: 0;
-        }
-        > :nth-child(3) {
-          animation: showContent .4s .8s ease-in-out forwards;
-          opacity: 0;
-        }
-        > :nth-child(4) {
-          animation: showContent .4s 1.2s ease-in-out forwards;
-          opacity: 0;
-        }
-        > :nth-child(5) {
-          animation: showContent .4s 1.6s ease-in-out forwards;
-          opacity: 0;
-        }
+        animation-delay: 0.8s;
       }
     }
+
   }
 
   body, html, #root {
@@ -116,5 +92,19 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+    @keyframes showContent {
+    from {
+      opacity: 0;
+      transform: translate(100px, 0);
+      filter: blur(33px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(inherit);
+      filter: blur(inherit);
+    }
   }
 `

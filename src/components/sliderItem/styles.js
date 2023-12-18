@@ -1,35 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  > div {
-    display: flex;
-    place-content: center;
-    align-items: center;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 20px;
-    border: 2px solid white;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-  }
-
-  &.styled {
-    > main {
-      div:nth-child(1) {
-        animation: showContent 0.4s ease-in-out forwards;
-      }
-      div:nth-child(2) {
-        animation: showContent 0.4s 0.2s ease-in-out forwards;
-      }
-    }
-
-    > div {
-      opacity: 0;
-      animation: showbtn 0.4s 0.4s ease-in-out forwards;
-    }
-  }
-
-  main {
+  > main {
     width: 300px;
     transform: translateY(-250px);
     display: none;
@@ -47,6 +19,51 @@ export const Container = styled.div`
     }
   }
 
+  > div {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  &.styled {
+    > main {
+      div {
+        animation: showContent 0.4s ease-in-out forwards;
+      }
+
+      div:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+    }
+
+    > div {
+      opacity: 0;
+      animation: showContent 0.4s 0.4s ease-in-out forwards;
+    }
+
+    &:nth-child(n + 2) > div {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(n + 3) > div {
+      animation-delay: 0.8s;
+    }
+
+    &:nth-child(n + 4) > div {
+      animation-delay: 1s;
+    }
+
+    &:nth-child(n + 5) > div {
+      animation-delay: 1.2s;
+    }
+  }
+
   p {
     text-align: left;
   }
@@ -60,31 +77,5 @@ export const Container = styled.div`
     width: 80%;
     height: 80%;
     object-fit: contain;
-  }
-
-  @keyframes showContent {
-    from {
-      opacity: 0;
-      transform: translate(100px, 0);
-      filter: blur(33px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateX(inherit);
-      filter: blur(0);
-    }
-  }
-
-  @keyframes showbtn {
-    from {
-      filter: blur(33px);
-      opacity: 0;
-    }
-
-    to {
-      filter: blur(inherit);
-      opacity: 1;
-    }
   }
 `

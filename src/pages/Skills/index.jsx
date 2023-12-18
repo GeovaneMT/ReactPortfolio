@@ -21,8 +21,12 @@ export const Skills = () => {
       <main>
         <Header text="Aqui estão minhas  " span="Habilidades" />
         <div>
-          <span>Venho estudando tecnologias Full Stack:</span>
-          <p>JavaScript, Node, React, API Restful, & Base de dados.</p>
+          <p>
+            <span>Venho estudando tecnologias Full Stack:</span>
+            <br />
+            <br />
+            JavaScript, Node, React, API Restful, & Base de dados.
+          </p>
         </div>
         <Slider />
         <div>
@@ -34,23 +38,10 @@ export const Skills = () => {
           </p>
         </div>
         <Slider
-          anchor="Ferramentas"
+          anchor="Ferramentas:"
           itemsConfig={[
             {
               icon: design,
-              title: "Design Think",
-              text1: "Design Think em Engenharia de Software, é ",
-              span1: "humanizar o design ",
-              br1: false,
-              text2: "para o usuário, com o objetivo de entregar uma melhor ",
-              span2: "compreensão ",
-              br2: false,
-              text3: "e ",
-              span3: "navegação ",
-              br3: false,
-            },
-            {
-              icon: devops,
               title: "Design Think",
               text1: "Design Think em Engenharia de Software, é ",
               span1: "humanizar o design ",
@@ -112,7 +103,7 @@ export const Skills = () => {
           </p>
         </div>
         <Slider
-          anchor="Técnicas"
+          anchor="Técnicas:"
           itemsConfig={[
             {
               icon: devops,
@@ -156,7 +147,6 @@ export const Skills = () => {
           ]}
         />
       </main>
-
       <Footer iconSize="32px" iconColor="white" />
     </Container>
   )
