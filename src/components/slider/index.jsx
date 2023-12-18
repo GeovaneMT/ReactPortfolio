@@ -75,12 +75,10 @@ export const Slider = ({
 
     const handleItemClick = (item, config) => {
 
-      // Remove the "styled" class from all items
       sliderItems.forEach((item) => {
         item.classList.remove("styled")
       })
 
-      // Use setTimeout with a delay of 0 to add the "styled" class back to the clicked item
       setTimeout(() => {
         sliderItems.forEach((item) => {
           item.classList.add("styled")

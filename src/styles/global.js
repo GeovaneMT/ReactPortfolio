@@ -1,7 +1,20 @@
 import { createGlobalStyle } from "styled-components"
+import { keyframes } from "styled-components"
+
+const showContent = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(inherit);
+    filter: blur(0);
+  }
+`
 
 export default createGlobalStyle`
-
   /* Width and height of the scrollbar track */
   ::-webkit-scrollbar {
     width: 1.2rem;
@@ -13,12 +26,12 @@ export default createGlobalStyle`
     border-radius: 100px;
     background: ${({ theme }) => theme.COLORS.BLUE};
   }
-  
+
   /* On hover, color of the scrollbar thumb */
   ::-webkit-scrollbar-thumb:hover {
     background-color: ${({ theme }) => theme.COLORS.CYAN};
   }
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -27,12 +40,11 @@ export default createGlobalStyle`
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
-
   }
 
   html {
-      font-size: 62.5%;
-      scroll-behavior: smooth;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -40,33 +52,20 @@ export default createGlobalStyle`
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
     color: ${({ theme }) => theme.COLORS.WHITE};
 
-    > div > div,
+    > div > div > *,
     > div > div > main {
-
-      > * {
-        opacity: 0;
-        animation: showContent .4s ease-in-out forwards;
-      }
-
-      > :nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      > :nth-child(3) {
-        animation-delay: 0.4s;
-      }
-      > :nth-child(4) {
-        animation-delay: 0.6s;
-      }
-      > :nth-child(5) {
-        animation-delay: 0.8s;
-      }
+      opacity: 0;
+      animation: ${showContent} 0.4s ease-in-out forwards;
     }
 
+    > div > div > *:nth-child(n + 2) {
+      animation-delay: calc(0.2s * (index() - 1));
+    }
   }
 
   body, html, #root {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
   }
 
   body, input, button, textarea {
@@ -76,35 +75,29 @@ export default createGlobalStyle`
   }
 
   a {
-    text-decoration: none
+    text-decoration: none;
   }
 
   a, button {
     cursor: pointer;
-    transition: filter 0,2s;
+    transition: filter 0.2s;
   }
 
   a:hover, button:hover {
-    filter: brightness(0.9)
+    filter: brightness(0.9);
   }
-  
+
   #buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-    @keyframes showContent {
-    from {
-      opacity: 0;
-      transform: translate(100px, 0);
-      filter: blur(33px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateX(inherit);
-      filter: blur(inherit);
+  @function index() {
+    $i: 0;
+    @while $i < 100 {
+      @return $i;
+      $i: $i + 1;
     }
   }
 `

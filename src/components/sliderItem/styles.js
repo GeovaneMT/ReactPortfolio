@@ -1,10 +1,27 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const showContent = keyframes`
+  from {
+    filter: blur(33px);
+  }
+  to {
+    filter: blur(0);
+  }
+`
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  width: 12rem;
+  margin: 30rem 1.4rem 1.4rem 1.4rem;
+  cursor: pointer;
+
   > main {
-    width: 300px;
-    transform: translateY(-250px);
     display: none;
+    flex-direction: column;
+    gap: 4rem;
+    width: 300px;
 
     div:nth-child(1) {
       font-size: ${({ theme }) => theme.COLORS.FSTITLE};
@@ -28,13 +45,20 @@ export const Container = styled.div`
     border-radius: 20px;
     border: 2px solid white;
     transition: all 0.3s ease-in-out;
-    opacity: 0;
+    filter: opacity(0.5);
+    margin-left: 2rem;
+
+    &:hover {
+      transform: scale(1.3);
+      filter: opacity(1);
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   &.styled {
     > main {
       div {
-        animation: showContent 0.4s ease-in-out forwards;
+        animation: ${showContent} 0.4s ease-in-out forwards;
       }
 
       div:nth-child(2) {
@@ -43,8 +67,7 @@ export const Container = styled.div`
     }
 
     > div {
-      opacity: 0;
-      animation: showContent 0.4s 0.4s ease-in-out forwards;
+      animation: ${showContent} 0.4s 0.4s ease-in-out forwards;
     }
 
     &:nth-child(n + 2) > div {
@@ -62,10 +85,6 @@ export const Container = styled.div`
     &:nth-child(n + 5) > div {
       animation-delay: 1.2s;
     }
-  }
-
-  p {
-    text-align: left;
   }
 
   span {
