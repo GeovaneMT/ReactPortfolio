@@ -51,7 +51,7 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.WHITE};
 
     > div > div > *,
-    > div > div > main {
+    > div > div > main > * {
       opacity: 0;
       animation: ${showContent} 0.4s ease-in-out forwards;
     }
