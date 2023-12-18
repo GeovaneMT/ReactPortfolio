@@ -47,13 +47,12 @@ export const Container = styled.div`
     border: 2px solid white;
     transition: all 0.3s ease-in-out;
     filter: opacity(0.5);
-    opacity:0;
+    opacity: 0;
     margin-left: 2rem;
 
     &:hover {
-      transform: scale(1.3);
       filter: opacity(1);
-      transition: all 0.3s ease-in-out;
+      transform: scale(1.3);
     }
   }
 
