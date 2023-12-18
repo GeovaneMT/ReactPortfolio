@@ -76,7 +76,7 @@ export const Info = () => {
           ]}
         />
       </main>
-      <Footer iconSize="32px" iconColor="white" />
+      <Footer />
     </Container>
   )
 }

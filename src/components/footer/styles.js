@@ -18,5 +18,6 @@ export const Container = styled.div`
 
   svg {
     filter: drop-shadow(0px 4px 4px #020f20);
+    font-size: 3.2rem;
   }
 `

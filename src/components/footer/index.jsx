@@ -1,25 +1,19 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
-import { StyleSheetManager } from "styled-components"
+import styled from "styled-components"
+import { useLocation, Link } from "react-router-dom"
 
-import theme from "../../styles/theme"
 import { Container } from "./styles"
 
-import {
-  PiHouseLine,
-  PiInfo,
-  PiGear,
-  PiUser
-} from "react-icons/pi"
+import theme from "../../styles/theme"
 
-export const Footer = ({
-  iconSize = "3.2rem",
-  defaultIconColor = theme.COLORS.WHITE_50,
-  activeIconColor = theme.COLORS.WHITE,
-  ...rest
-}) => {
-  const location = useLocation()
+import { PiHouseLine, PiInfo, PiGear, PiUser } from "react-icons/pi"
 
+const FooterIcon = styled.span`
+  color: ${({ $active }) =>
+    $active === "true" ? theme.COLORS.WHITE : theme.COLORS.WHITE_50};
+`
+
+export const Footer = ({ active, ...rest }) => {
   const icons = [
     { icon: <PiHouseLine />, link: "/" },
     { icon: <PiInfo />, link: "/Info" },
@@ -27,27 +21,17 @@ export const Footer = ({
     { icon: <PiUser />, link: "/Contact" },
   ]
 
-  const iconStyles = React.useMemo (() => ({fontSize: iconSize}),[iconSize])
+  const currentLocation = useLocation().pathname
 
   return (
-    <StyleSheetManager shouldForwardProp={(prop) => prop !== "iconColor"}>
-      <Container {...rest}>
-        {icons.map((icon, index) => (
-          <a key={index} href={icon.link} style={{ textDecoration: "none" }}>
-            <span
-              style={{
-                ...iconStyles,
-                color:
-                  location.pathname === icon.link
-                    ? activeIconColor
-                    : defaultIconColor,
-              }}
-            >
-              {icon.icon}
-            </span>
-          </a>
-        ))}
-      </Container>
-    </StyleSheetManager>
+    <Container>
+      {icons.map(({ icon, link }, index) => (
+        <Link key={index} to={link}>
+          <FooterIcon $active={currentLocation === link ? "true" : "false"}>
+            {icon}
+          </FooterIcon>
+        </Link>
+      ))}
+    </Container>
   )
 }

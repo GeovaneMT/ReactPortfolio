@@ -147,7 +147,7 @@ export const Skills = () => {
           ]}
         />
       </main>
-      <Footer iconSize="32px" iconColor="white" />
+      <Footer />
     </Container>
   )
 }

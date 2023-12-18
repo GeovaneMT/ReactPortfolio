@@ -43,7 +43,7 @@ export const Home = () => {
           </li>
         </ul>
       </main>
-      <Footer iconSize="32px" iconColor="white" />
+      <Footer />
     </Container>
   )
 }
