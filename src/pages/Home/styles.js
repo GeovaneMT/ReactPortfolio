@@ -78,6 +78,9 @@ export const Container = styled.div`
   @media screen and (min-width: 769px) {
     > main > div {
       flex-direction: row;
+      gap: 0px;
+      width: 100%;
+      justify-content: space-evenly;
     }
   }
 
