@@ -36,7 +36,7 @@ export const Container = styled.div`
   bottom: 32px;
   left: 50%;
   padding: 1.6rem 3.2rem;
-  border-radius: 4rem;
+  border-radius: 20rem;
   filter: drop-shadow(0px 4px 4px #020f20);
 
   &.show {
