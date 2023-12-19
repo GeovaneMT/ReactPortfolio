@@ -16,7 +16,7 @@ export const Container = styled.button`
   margin: 1.6rem auto 0;
 
   border-radius: 20px;
-  
+
   filter: opacity(1);
 
   &:disabled {
@@ -29,6 +29,15 @@ export const Container = styled.button`
     display: flex;
     align-items: center;
     gap: 2.4vw;
-    width: 75%;
+    padding: 0 3.2rem;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 769px) {
+    padding: 0;
+
+    > a {
+      height: 100%;
+    }
   }
 `
