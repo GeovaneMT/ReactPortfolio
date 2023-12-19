@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Container = styled.div`
   height: 100%;
@@ -18,18 +18,24 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-  }
 
-  & > main > div > p {
-    text-align: left;
-    > span {
-      font-weight: bold;
-      font-size: ${({ theme }) => theme.COLORS.FSSPAN};
-      color: ${({ theme }) => theme.COLORS.CYAN};
+    > p {
+      text-align: left;
+
+      > span {
+        font-weight: bold;
+        color: ${({ theme }) => theme.COLORS.CYAN};
+      }
+
+      &:nth-child(2) {
+        > span {
+          font-size: ${({ theme }) => theme.COLORS.FSSPAN};
+        }
+      }
     }
   }
 
-  > main > div:nth-child(2){
+  > main > div:nth-child(2) {
     flex-direction: column;
     border-radius: 20px;
     display: flex;

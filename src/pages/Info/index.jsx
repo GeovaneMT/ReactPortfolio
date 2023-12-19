@@ -13,69 +13,67 @@ export const Info = () => {
   return (
     <Container>
       <Anchor text="Sobre Mim" />
+
       <main>
         <Header text="Você aqui é uma grande" span="Alegria" />
-          <div>
+
+        <div>
           <Anchor text="Sobre mim" />
-            <p>
-              <span> Sua visita é muito importante para mim, obrigado! </span>
-              <br />
-              <br />
-              Sou um entusiasta por Fotografia, Carros e Games.
-            </p>
-            <p>
-              Atualmente estou cursando <span>Engenharia de Software</span> na
-              Anhanguera, e <span>Desenvolvimento Full Stack</span> na
-              Rocketseat:
-            </p>
-          </div>
+          <p>
+            <span>Sua visita é muito importante para mim, obrigado!</span>
+            <br />
+            <br />
+            Sou um entusiasta por Fotografia, Carros e Games.
+          </p>
+
+          <p>
+            Atualmente estou cursando <span>Engenharia de Software</span> na
+            Anhanguera, e <span>Desenvolvimento Full Stack</span> na Rocketseat:
+          </p>
+        </div>
+
         <Slider
           anchor="Formação"
           itemsConfig={[
             {
               icon: anhanguera,
               title: "Eng. Software",
-              text1: "Bacharelado Anhanguera com o objetivo de aprender ",
-              span1: "todas as etapas ",
-              br1: false,
-              text2: "do ",
-              span2: "desenvolvimento de um software.",
-              br2: true,
-              text3: "",
-              span3: "",
-              br3: true,
+              text: (
+                <>
+                  Bacharelado Anhanguera com o objetivo de aprender
+                  <span>todas as etapas </span>do desenvolvimento de um
+                  software.
+                </>
+              ),
             },
             {
               icon: rocket,
               title: "Rocketseat",
-              text1: "Bootcamp de 1 ano aprendendo ",
-              span1: "Programação baseada em JS. ",
-              br1: true,
-              text2: "Isso inclúi: ",
-              span2:
-                "Javascript, React, Node, SQL, Frameworks e bibliotecas JS ",
-              br2: false,
-              text3: "",
-              span3: "",
-              br3: false,
+              text: (
+                <>
+                  Bootcamp de 1 ano aprendendo
+                  <span>Programação baseada em JS.</span> Isso inclui:
+                  <span>
+                    Javascript, React, Node, SQL, Frameworks e bibliotecas JS.
+                  </span>
+                </>
+              ),
             },
             {
               icon: matera,
               title: "Matera Camp",
-              text1:
-                "Bootcamp da Matera de 1 semana, com o objetivo de aprender sobre ",
-              span1: "Segurança da Informação ",
-              br1: false,
-              text2: "e ",
-              span2: "Cloud ",
-              br2: true,
-              text3: "",
-              span3: "",
-              br3: true,
+              text: (
+                <>
+                  Bootcamp da Matera de 1 semana, com o objetivo de aprender
+                  sobre <span>Segurança da Informação </span>e
+                  <span>Cloud.</span>
+                </>
+              ),
             },
           ]}
         />
       </main>
+
       <Footer />
     </Container>
   )

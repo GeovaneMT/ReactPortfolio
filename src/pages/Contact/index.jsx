@@ -1,5 +1,5 @@
+import React from "react"
 import { Container } from "./styles"
-
 import { Anchor } from "../../components/anchor"
 import { Header } from "../../components/header"
 import { Button } from "../../components/button"
@@ -14,10 +14,10 @@ import {
 
 export const Contact = () => {
   const socialButtons = [
-    { icon: <PiWhatsappLogo   />, title: " Whatsapp" },
-    { icon: <PiLinkedinLogo   />, title: " Linkedin" },
-    { icon: <PiGithubLogo     />, title: " Github" },
-    { icon: <PiInstagramLogo  />, title: " Instagram" },
+    { icon: <PiWhatsappLogo />, title: " Whatsapp" },
+    { icon: <PiLinkedinLogo />, title: " Linkedin" },
+    { icon: <PiGithubLogo />, title: " Github" },
+    { icon: <PiInstagramLogo />, title: " Instagram" },
   ]
 
   return (

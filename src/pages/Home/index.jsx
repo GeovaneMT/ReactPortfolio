@@ -14,14 +14,13 @@ import { PiUsersThree ,
          PiBuildings } from "react-icons/pi"
 
 export const Home = () => {
-
   return (
     <Container>
       <Anchor text="Home" />
       <main>
         <Header text="Olá, eu sou  " span="Geovane M.T" />
         <div>
-          <img src={profile} alt="" />
+          <img src={profile} alt="Profile" />
         </div>
         <ul>
           <li>

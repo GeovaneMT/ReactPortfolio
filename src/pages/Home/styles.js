@@ -50,20 +50,22 @@ export const Container = styled.div`
       box-shadow: -16px 16px 32px 0px #020f20;
     }
 
-    > :nth-child(1) {
+    > :nth-child(1),
+    > :nth-child(2),
+    > :nth-child(3) {
       animation: showContent 0.4s ease-in-out forwards;
       opacity: 0;
     }
+
     > :nth-child(2) {
-      animation: showContent 0.4s 0.4s ease-in-out forwards;
-      opacity: 0;
+      animation-delay: 0.4s;
     }
+
     > :nth-child(3) {
-      animation: showContent 0.4s 0.8s ease-in-out forwards;
-      opacity: 0;
+      animation-delay: 0.8s;
     }
   }
-  
+
   @keyframes showContent {
     from {
       opacity: 0;
@@ -73,7 +75,7 @@ export const Container = styled.div`
 
     to {
       opacity: 1;
-      transform: translateX(inherit);
+      transform: translateX(0);
       filter: blur(0);
     }
   }
