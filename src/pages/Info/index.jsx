@@ -4,6 +4,7 @@ import { Anchor } from "../../components/anchor"
 import { Header } from "../../components/header"
 import { Menu } from "../../components/menu"
 import { Slider } from "../../components/slider"
+import { Footer } from "../../components/footer"
 
 import anhanguera from "../../assets/Icons/anhanguera.png"
 import rocket from "../../assets/Icons/rocket.svg"
@@ -14,6 +15,7 @@ export const Info = () => {
     <Container>
       <Anchor text="Sobre Mim" />
 
+      <Menu />
       <main>
         <Header text="Você aqui é uma grande" span="Alegria" />
 
@@ -78,9 +80,8 @@ export const Info = () => {
             },
           ]}
         />
+      <Footer />
       </main>
-
-      <Menu />
     </Container>
   )
 }

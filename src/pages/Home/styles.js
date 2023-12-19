@@ -43,6 +43,10 @@ export const Container = styled.div`
       align-items: center;
       gap: 80px;
 
+      &:last-child {
+        background: none;
+      }
+
       > img {
         width: 240px;
         border-radius: 50%;
@@ -72,9 +76,9 @@ export const Container = styled.div`
 
   @media screen and (min-width: 769px) {
     > main > div {
-        flex-direction: row;
-      }
+      flex-direction: row;
     }
+  }
 
   @keyframes showContent {
     from {

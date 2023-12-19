@@ -4,6 +4,7 @@ import { Anchor } from '../../components/anchor'
 import { Header } from '../../components/header'
 import { Menu } from "../../components/menu"
 import { Slider } from "../../components/slider"
+import { Footer } from "../../components/footer"
 
 import design from "../../assets/Icons/design.png"
 import figma from "../../assets/Icons/figma.svg"
@@ -18,6 +19,7 @@ export const Skills = () => {
   return (
     <Container>
       <Anchor text="Habilidades" />
+      <Menu />
       <main>
         <Header text="Aqui estão minhas  " span="Habilidades" />
         <div>
@@ -146,8 +148,8 @@ export const Skills = () => {
             },
           ]}
         />
+        <Footer />
       </main>
-      <Menu />
     </Container>
   )
 }

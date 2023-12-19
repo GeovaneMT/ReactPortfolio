@@ -4,6 +4,7 @@ import { Anchor } from "../../components/anchor"
 import { Header } from "../../components/header"
 import { Button } from "../../components/button"
 import { Menu } from "../../components/menu"
+import { Footer } from "../../components/footer"
 
 import {
   PiInstagramLogo,
@@ -39,6 +40,7 @@ export const Contact = () => {
 
   return (
     <Container>
+      <Menu />
       <Anchor text="Contato" />
       <main>
         <Header text="Sinta-se à vontade para entrar em " span="Contato" />
@@ -52,8 +54,8 @@ export const Contact = () => {
             />
           ))}
         </div>
+      <Footer />
       </main>
-      <Menu />
     </Container>
   )
 }

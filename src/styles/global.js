@@ -72,13 +72,10 @@ export default createGlobalStyle`
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 0 8vw 32vh;
+    padding: 0 8vw 12vh;
     gap: 80px;
     }
 
-    > div > div > *:nth-child(n + 2) {
-      animation-delay: calc(0.2s * (index() - 1));
-    }
   }
 
   body, html, #root {
@@ -122,7 +119,7 @@ export default createGlobalStyle`
 
   @media screen and (min-width: 769px) {
     body > div > div > main {
-    padding: 0 13vw 32vh 8vw ;
+    padding: 0 13vw 12vh 8vw ;
     }
   }
 `

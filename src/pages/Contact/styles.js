@@ -13,6 +13,10 @@ export const Container = styled.div`
         "child2 child1 child1"
         "child2 child3 child4";
       gap: 20px;
+
+        &:last-child > p {
+          margin-bottom: 4vh;
+        }
     }
 
     button {
