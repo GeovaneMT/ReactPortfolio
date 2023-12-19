@@ -13,34 +13,34 @@ import { PiUsersThree ,
          PiGear , 
          PiBuildings } from "react-icons/pi"
 
-export const Home = () => {
-  return (
-    <Container>
+         export const Home = () => {
+           return (
+             <Container>
       <Anchor text="Home" />
       <main>
         <Header text="Olá, eu sou  " span="Geovane M.T" />
         <div>
           <img src={profile} alt="Profile" />
-        </div>
-        <ul>
-          <li>
-            <PiUsersThree />
-            Engenheiro de Software
-          </li>
+          <ul>
+            <li>
+              <PiUsersThree />
+              Engenheiro de Software
+            </li>
 
-          <li>
-            <PiCodeBlock />
-            Desenv. Full Stack
-          </li>
-          <li>
-            <PiGear />
-            UI | UX Designer
-          </li>
-          <li>
-            <PiBuildings />
-            Administrador
-          </li>
-        </ul>
+            <li>
+              <PiCodeBlock />
+              Desenv. Full Stack
+            </li>
+            <li>
+              <PiGear />
+              UI | UX Designer
+            </li>
+            <li>
+              <PiBuildings />
+              Administrador
+            </li>
+          </ul>
+        </div>
       </main>
       <Footer />
     </Container>

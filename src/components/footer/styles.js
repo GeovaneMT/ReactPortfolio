@@ -8,7 +8,7 @@ const showContent = keyframes`
   }
   to {
     opacity: 1;
-    transform: translate(-50%, 0%)
+    transform: translate(-50%, 0)
   }
 `
 
@@ -52,5 +52,18 @@ export const Container = styled.div`
   svg {
     filter: drop-shadow(0px 4px 4px #020f20);
     font-size: 3.2rem;
+  }
+
+  a:hover span {
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
+
+  @media screen and (min-width: 769px) {
+    flex-direction: column;
+    height: calc(75% - 8vh);
+    width: 7vw;
+    right: 0;
+    bottom: 15%;
+    left: inherit;
   }
 `

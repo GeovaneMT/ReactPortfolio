@@ -42,7 +42,7 @@ export const Contact = () => {
       <Anchor text="Contato" />
       <main>
         <Header text="Sinta-se à vontade para entrar em " span="Contato" />
-        <div id="buttons">
+        <div>
           {socialButtons.map((button, index) => (
             <Button
               key={index}

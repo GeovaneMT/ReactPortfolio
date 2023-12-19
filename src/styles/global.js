@@ -56,6 +56,16 @@ export default createGlobalStyle`
       animation: ${showContent} 0.4s ease-in-out forwards;
     }
 
+    > div > div > main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 8vw 24vh;
+    gap: 80px;
+    }
+
     > div > div > *:nth-child(n + 2) {
       animation-delay: calc(0.2s * (index() - 1));
     }
@@ -78,11 +88,12 @@ export default createGlobalStyle`
 
   a, button {
     cursor: pointer;
-    transition: filter 0.2s;
+    transition: all 0.3s ease-in-out;
   }
 
   a:hover, button:hover {
-    filter: brightness(0.9);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
   }
 
   #buttons {
@@ -96,6 +107,12 @@ export default createGlobalStyle`
     @while $i < 100 {
       @return $i;
       $i: $i + 1;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    body > div > div > main {
+    padding: 0 13vw 24vh 8vw ;
     }
   }
 `

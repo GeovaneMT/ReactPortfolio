@@ -34,20 +34,24 @@ export const Container = styled.div`
   }
 
   > main {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 0 8vw 21rem;
-    gap: 80px;
     align-items: center;
     background-image: url({background});
 
-    div > img {
-      width: 240px;
-      border-radius: 50%;
-      box-shadow: -16px 16px 32px 0px #020f20;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+
+      > img {
+        width: 240px;
+        border-radius: 50%;
+        box-shadow: -16px 16px 32px 0px #020f20;
+      }
+
+      > ul {
+        width: max-content;
+      }
     }
 
     > :nth-child(1),
@@ -65,6 +69,12 @@ export const Container = styled.div`
       animation-delay: 0.8s;
     }
   }
+
+  @media screen and (min-width: 769px) {
+    > main > div {
+        flex-direction: row;
+      }
+    }
 
   @keyframes showContent {
     from {

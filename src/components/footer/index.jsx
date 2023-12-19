@@ -11,6 +11,7 @@ import { PiHouseLine, PiInfo, PiGear, PiUser } from "react-icons/pi"
 const FooterIcon = styled.span`
   color: ${({ $active }) =>
     $active === "true" ? theme.COLORS.WHITE : theme.COLORS.WHITE_50};
+  cursor: ${({ $active }) => ($active === "true" ? "default" : "pointer")};
 `
 
 export const Footer = ({ active, ...rest }) => {
@@ -55,11 +56,15 @@ export const Footer = ({ active, ...rest }) => {
   return (
     <Container className="barra">
       {icons.map(({ icon, link }, index) => (
-        <Link key={index} to={link}>
-          <FooterIcon $active={currentLocation === link ? "true" : "false"}>
-            {icon}
-          </FooterIcon>
-        </Link>
+        <React.Fragment key={index}>
+          {currentLocation === link ? (
+            <FooterIcon $active="true">{icon}</FooterIcon>
+          ) : (
+            <Link to={link}>
+              <FooterIcon $active="false">{icon}</FooterIcon>
+            </Link>
+          )}
+        </React.Fragment>
       ))}
     </Container>
   )

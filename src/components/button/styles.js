@@ -13,9 +13,11 @@ export const Container = styled.button`
   height: 5.6rem;
 
   padding: 0 3.2rem;
-  margin-top: 1.6rem;
+  margin: 1.6rem auto 0;
 
-  border-radius: 40px;
+  border-radius: 20px;
+  
+  filter: opacity(1);
 
   &:disabled {
     opacity: 0.5;

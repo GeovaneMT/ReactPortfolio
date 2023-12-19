@@ -5,13 +5,6 @@ export const Container = styled.div`
   overflow: hidden;
 
   > main {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 0 8vw 21rem;
-    gap: 80px;
 
     > div > p > span {
       font-weight: bold;
