@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Container } from "./styles"
 
 export const Button = ({
@@ -7,18 +8,27 @@ export const Button = ({
   loading = false,
   iconSize = "2.4rem",
   iconColor = "white",
+  to = "",
   ...rest
 }) => {
-    
-    const iconStyles = {
+  const iconStyles = {
     fontSize: iconSize,
     color: iconColor,
   }
 
-  return (
+  const buttonOrLink = to ? (
+    <Container disabled={loading}>
+      <Link to={to} {...rest}>
+        <span style={iconStyles}>{icon}</span>
+        {loading ? "Carregando..." : title}
+      </Link>
+    </Container>
+  ) : (
     <Container type="button" disabled={loading} {...rest}>
       <span style={iconStyles}>{icon}</span>
       {loading ? "Carregando..." : title}
     </Container>
   )
+
+  return buttonOrLink
 }
