@@ -72,7 +72,7 @@ export default createGlobalStyle`
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 0 8vw 24vh;
+    padding: 0 8vw 32vh;
     gap: 80px;
     }
 
@@ -122,7 +122,7 @@ export default createGlobalStyle`
 
   @media screen and (min-width: 769px) {
     body > div > div > main {
-    padding: 0 13vw 24vh 8vw ;
+    padding: 0 13vw 32vh 8vw ;
     }
   }
 `
