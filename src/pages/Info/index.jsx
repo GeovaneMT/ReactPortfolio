@@ -38,37 +38,43 @@ export const Info = () => {
             {
               icon: anhanguera,
               title: "Eng. Software",
-              text: (
-                <>
-                  Bacharelado Anhanguera com o objetivo de aprender
-                  <span>todas as etapas </span>do desenvolvimento de um
-                  software.
-                </>
-              ),
+              text1: "Bacharelado Anhanguera com o objetivo de ",
+              span1: "aprender todas as etapas ",
+              br1: true,
+              text2: "do ",
+              span2: "desenvolvimento de um software. ",
+              br2: true,
+              text3: "",
+              span3: "",
+              br3: true,
             },
             {
               icon: rocket,
               title: "Rocketseat",
-              text: (
-                <>
-                  Bootcamp de 1 ano aprendendo
-                  <span>Programação baseada em JS.</span> Isso inclui:
-                  <span>
-                    Javascript, React, Node, SQL, Frameworks e bibliotecas JS.
-                  </span>
-                </>
-              ),
+              text1: "Bootcamp de 1 ano aprendendo ",
+              span1: "Programação baseada em JS. ",
+              br1: false,
+              text2: " Isso inclui: ",
+              span2:
+                "Javascript, React, Node, SQL, Frameworks e bibliotecas JS. ",
+              br2: false,
+              text3: "",
+              span3: "",
+              br3: false,
             },
             {
               icon: matera,
               title: "Matera Camp",
-              text: (
-                <>
-                  Bootcamp da Matera de 1 semana, com o objetivo de aprender
-                  sobre <span>Segurança da Informação </span>e
-                  <span>Cloud.</span>
-                </>
-              ),
+              text1:
+                "Bootcamp da Matera de 1 semana, com o objetivo de aprender sobre ",
+              span1: "Segurança da Informação ",
+              br1: false,
+              text2: "e ",
+              span2: "Cloud. ",
+              br2: true,
+              text3: "",
+              span3: "",
+              br3: true,
             },
           ]}
         />

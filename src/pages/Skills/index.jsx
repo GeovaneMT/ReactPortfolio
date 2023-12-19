@@ -87,10 +87,10 @@ export const Skills = () => {
               br1: false,
               text2: "",
               span2: " ",
-              br2: false,
+              br2: true,
               text3: "",
               span3: "",
-              br3: false,
+              br3: true,
             },
           ]}
         />
