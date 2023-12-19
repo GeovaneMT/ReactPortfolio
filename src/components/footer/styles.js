@@ -28,6 +28,7 @@ export const Container = styled.div`
 
   display: flex;
   position: fixed;
+  z-index: 2;
   justify-content: space-around;
   align-items: center;
   transform: translateX(-50%);
