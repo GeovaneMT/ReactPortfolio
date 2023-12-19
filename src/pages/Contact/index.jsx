@@ -3,7 +3,7 @@ import { Container } from "./styles"
 import { Anchor } from "../../components/anchor"
 import { Header } from "../../components/header"
 import { Button } from "../../components/button"
-import { Footer } from "../../components/footer"
+import { Menu } from "../../components/menu"
 
 import {
   PiInstagramLogo,
@@ -53,7 +53,7 @@ export const Contact = () => {
           ))}
         </div>
       </main>
-      <Footer />
+      <Menu />
     </Container>
   )
 }

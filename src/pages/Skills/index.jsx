@@ -2,7 +2,7 @@ import { Container } from './styles'
 
 import { Anchor } from '../../components/anchor'
 import { Header } from '../../components/header'
-import { Footer } from "../../components/footer"
+import { Menu } from "../../components/menu"
 import { Slider } from "../../components/slider"
 
 import design from "../../assets/Icons/design.png"
@@ -147,7 +147,7 @@ export const Skills = () => {
           ]}
         />
       </main>
-      <Footer />
+      <Menu />
     </Container>
   )
 }

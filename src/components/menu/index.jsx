@@ -8,13 +8,13 @@ import theme from "../../styles/theme"
 
 import { PiHouseLine, PiInfo, PiGear, PiUser } from "react-icons/pi"
 
-const FooterIcon = styled.span`
+const MenuIcon = styled.span`
   color: ${({ $active }) =>
     $active === "true" ? theme.COLORS.WHITE : theme.COLORS.WHITE_50};
   cursor: ${({ $active }) => ($active === "true" ? "default" : "pointer")};
 `
 
-export const Footer = ({ active, ...rest }) => {
+export const Menu = ({ active, ...rest }) => {
   const icons = [
     { icon: <PiHouseLine />, link: "/" },
     { icon: <PiInfo />, link: "/Info" },
@@ -58,10 +58,10 @@ export const Footer = ({ active, ...rest }) => {
       {icons.map(({ icon, link }, index) => (
         <React.Fragment key={index}>
           {currentLocation === link ? (
-            <FooterIcon $active="true">{icon}</FooterIcon>
+            <MenuIcon $active="true">{icon}</MenuIcon>
           ) : (
             <Link to={link}>
-              <FooterIcon $active="false">{icon}</FooterIcon>
+              <MenuIcon $active="false">{icon}</MenuIcon>
             </Link>
           )}
         </React.Fragment>

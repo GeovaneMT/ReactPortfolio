@@ -2,7 +2,7 @@ import { Container } from "./styles"
 
 import { Anchor } from "../../components/anchor"
 import { Header } from "../../components/header"
-import { Footer } from "../../components/footer"
+import { Menu } from "../../components/menu"
 import { Slider } from "../../components/slider"
 
 import anhanguera from "../../assets/Icons/anhanguera.png"
@@ -80,7 +80,7 @@ export const Info = () => {
         />
       </main>
 
-      <Footer />
+      <Menu />
     </Container>
   )
 }

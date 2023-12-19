@@ -4,7 +4,7 @@ import { Container } from './styles'
 
 import { Anchor } from '../../components/anchor'
 import { Header } from '../../components/header'
-import { Footer } from "../../components/footer"
+import { Menu } from "../../components/menu"
 
 import profile from "../../assets/images/profile.jpg"
 
@@ -42,7 +42,7 @@ import { PiUsersThree ,
           </ul>
         </div>
       </main>
-      <Footer />
+      <Menu />
     </Container>
   )
 }
