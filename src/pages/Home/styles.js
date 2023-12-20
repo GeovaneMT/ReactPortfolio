@@ -45,6 +45,7 @@ export const Container = styled.div`
 
       &:last-child {
         background: none;
+        margin-top: 0;
       }
 
       > img {
@@ -77,6 +78,9 @@ export const Container = styled.div`
   @media screen and (min-width: 769px) {
     > main > div {
       flex-direction: row;
+      gap: 0px;
+      width: 100%;
+      justify-content: space-evenly;
     }
   }
 
