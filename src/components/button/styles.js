@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const Container = styled.button`
-  background: ${({ theme }) => theme.COLORS.GRADIENT};
   color: ${({ theme }) => theme.COLORS.WHITE};
+  background: ${({ theme }) => theme.COLORS.GRADIENT};
 
   display: flex;
   align-items: center;
@@ -19,8 +19,28 @@ export const Container = styled.button`
 
   filter: opacity(1);
 
-  &:disabled {
-    opacity: 0.5;
+  p {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    display: block;
+
+    &:last-child {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    p {
+      transition: all 0.3s ease-in-out;
+      display: none;
+      opacity: 0;
+
+      &:last-child {
+        display: block;
+        opacity: 1;
+      }
+    }
   }
 
   > a {
@@ -34,7 +54,6 @@ export const Container = styled.button`
   }
 
   @media screen and (min-width: 769px) {
-    padding: 0;
 
     > a {
       height: 100%;

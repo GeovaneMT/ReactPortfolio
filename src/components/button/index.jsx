@@ -4,8 +4,8 @@ import { Container } from "./styles"
 
 export const Button = ({
   title = "Ir Para",
+  fixedTitle = "Ir Para",
   icon = "",
-  loading = false,
   iconSize = "2.4rem",
   iconColor = "white",
   to = "",
@@ -17,16 +17,18 @@ export const Button = ({
   }
 
   const buttonOrLink = to ? (
-    <Container disabled={loading}>
-      <Link to={to} {...rest}>
+    <Container>
+      <Link target="_blank" rel="noreferrer" to={to} {...rest}>
         <span style={iconStyles}>{icon}</span>
-        {loading ? "Carregando..." : title}
+        <p>{title}</p>
+        <p>{fixedTitle}</p>
       </Link>
     </Container>
   ) : (
-    <Container type="button" disabled={loading} {...rest}>
+    <Container type="button" {...rest}>
       <span style={iconStyles}>{icon}</span>
-      {loading ? "Carregando..." : title}
+      <p>{title}</p>
+      <p>{fixedTitle}</p>
     </Container>
   )
 

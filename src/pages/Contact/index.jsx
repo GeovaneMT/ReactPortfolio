@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Container } from "./styles"
 import { Anchor } from "../../components/anchor"
 import { Header } from "../../components/header"
@@ -37,6 +37,28 @@ export const Contact = () => {
       link: "https://www.instagram.com/gmtgeovane/",
     },
   ]
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      for (const card of document.querySelectorAll("button")) {
+        const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top
+
+        card.style.setProperty("--mouse-x", `${x}px`)
+        card.style.setProperty("--mouse-y", `${y}px`)
+      }
+    }
+
+    const cardsElement = document.getElementById("cards")
+
+    if (cardsElement) {
+      cardsElement.addEventListener("mousemove", handleMouseMove)
+
+      return () => {
+        cardsElement.removeEventListener("mousemove", handleMouseMove)
+      }
+    }
+  }, [])
 
   return (
     <Container>
@@ -44,7 +66,8 @@ export const Contact = () => {
       <Anchor text="Contato" />
       <main>
         <Header text="Sinta-se à vontade para entrar em " span="Contato" />
-        <div>
+
+        <div id="cards">
           {socialButtons.map((button, index) => (
             <Button
               key={index}
@@ -54,7 +77,7 @@ export const Contact = () => {
             />
           ))}
         </div>
-      <Footer />
+        <Footer />
       </main>
     </Container>
   )
