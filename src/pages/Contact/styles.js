@@ -20,6 +20,7 @@ export const Container = styled.div`
       &:last-child > p {
         margin-bottom: 4vh;
       }
+      
       button {
         &:nth-child(1) {
           grid-area: child1;

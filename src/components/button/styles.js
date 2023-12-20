@@ -8,8 +8,17 @@ const showContent = keyframes`
   }
   to {
     opacity: 1;
-    display: flex;
-    width: inherit;
+    width: 100%;
+  }
+`
+const hideContent = keyframes`
+  from {
+    opacity: 1;
+    width: 100%;
+  }
+  to {
+    opacity: 0;
+    width: 0;
   }
 `
 
@@ -17,7 +26,6 @@ export const Container = styled.button`
   color: ${({ theme }) => theme.COLORS.WHITE};
   background: ${({ theme }) => theme.COLORS.GRADIENT};
   display: flex;
-  align-items: center;
   gap: 2.4vw;
   width: 75%;
   height: 5.6rem;
@@ -71,11 +79,17 @@ export const Container = styled.button`
     height: 100%;
     transition: all 0.3s ease-in-out;
     width: 100%;
-    animation: ${showContent} 0.3s ease-in-out forwards;
   }
 
   span {
     z-index: 3;
+
+    svg {
+      &:last-child {
+        display: none;
+        opacity: 0;
+      }
+    }
   }
 
   p {
@@ -90,10 +104,38 @@ export const Container = styled.button`
     }
   }
 
+  &:not(:hover) {
+    > a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      animation: ${hideContent} 0.3s ease-in-out forwards;
+      background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    }
+  }
+
   &:hover {
-    &::after {
+    > a::before {
+      content: "";
+      display: block;
+      opacity: 0;
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
       animation: ${showContent} 0.3s ease-in-out forwards;
+      background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    }
+
+    span > svg {
+      transition: all 0.3s ease-in-out;
       display: none;
+      opacity: 0;
+
+      &:last-child {
+        display: block;
+        opacity: 1;
+      }
     }
 
     p {
@@ -105,21 +147,6 @@ export const Container = styled.button`
         display: block;
         opacity: 1;
       }
-    }
-
-    > a {
-      display: none;
-    }
-
-    > a::before {
-      content: "";
-      display: block;
-      opacity: 1;
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      animation: ${showContent} 0.3s ease-in-out forwards;
-      background: ${({ theme }) => theme.COLORS.BACKGROUND};
     }
   }
 

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Container } from "./styles"
+import { PiArrowCircleRight } from "react-icons/pi"
 
 export const Button = ({
   title = "Ir Para",
@@ -19,7 +20,10 @@ export const Button = ({
   const buttonOrLink = to ? (
     <Container>
       <Link target="_blank" rel="noreferrer" to={to} {...rest}>
-        <span style={iconStyles}>{icon}</span>
+        <span style={iconStyles}>
+          {icon}
+          <PiArrowCircleRight />
+        </span>
         <p>{title}</p>
         <p>{fixedTitle}</p>
       </Link>

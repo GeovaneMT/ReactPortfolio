@@ -99,7 +99,7 @@ export default createGlobalStyle`
   }
 
   a:hover, button:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: all 0.3s ease-in-out;
   }
 
