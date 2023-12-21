@@ -55,29 +55,22 @@ export const Container = styled.div`
         &::before {
           content: "";
           position: absolute;
-          inset: -1rem 8rem;
+          inset: -1rem 0rem;
           background: linear-gradient(
             315deg,
             ${({ theme }) => theme.COLORS.BACKGROUND},
+            ${({ theme }) => theme.COLORS.BACKGROUND},
             ${({ theme }) => theme.COLORS.BLUE},
+            ${({ theme }) => theme.COLORS.BACKGROUND},
             ${({ theme }) => theme.COLORS.BACKGROUND}
           );
           transition: all 0.3s ease-in-out;
           animation: animate 4s linear infinite;
         }
 
-        &::after {
-          content: "";
-          position: absolute;
-          inset: 0.4rem;
-          background: ${({ theme }) => theme.COLORS.BACKGROUND};
-          border-radius: 50%;
-        }
-
         > div {
           position: absolute;
-          inset: 1rem;
-          border: 0.4rem solid ${({ theme }) => theme.COLORS.BLUE};
+          inset: .8rem;
           border-radius: 50%;
           z-index: 3;
 
