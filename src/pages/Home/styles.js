@@ -60,7 +60,13 @@ export const Container = styled.div`
             315deg,
             ${({ theme }) => theme.COLORS.BACKGROUND},
             ${({ theme }) => theme.COLORS.BACKGROUND},
+            ${({ theme }) => theme.COLORS.BACKGROUND},
+            ${({ theme }) => theme.COLORS.BACKGROUND},
             ${({ theme }) => theme.COLORS.BLUE},
+            ${({ theme }) => theme.COLORS.CYAN},
+            ${({ theme }) => theme.COLORS.BLUE},
+            ${({ theme }) => theme.COLORS.BACKGROUND},
+            ${({ theme }) => theme.COLORS.BACKGROUND},
             ${({ theme }) => theme.COLORS.BACKGROUND},
             ${({ theme }) => theme.COLORS.BACKGROUND}
           );

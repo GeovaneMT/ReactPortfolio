@@ -59,32 +59,32 @@ export const Container = styled.div`
   &.styled {
     > main {
       div {
-        animation: ${showContent} 0.4s ease-in-out forwards;
+        animation: ${showContent} .6s ease-in-out forwards;
       }
 
       div:nth-child(2) {
-        animation-delay: 0.2s;
+        animation-delay: .3s;
       }
     }
 
     > div {
-      animation: ${showContent} 0.4s 0.4s ease-in-out forwards;
+      animation: ${showContent} .6s .6s ease-in-out forwards;
     }
 
     &:nth-child(n + 2) > div {
-      animation-delay: 0.6s;
+      animation-delay: .9s;
     }
 
     &:nth-child(n + 3) > div {
-      animation-delay: 0.8s;
+      animation-delay: 1.2s;
     }
 
     &:nth-child(n + 4) > div {
-      animation-delay: 1s;
+      animation-delay: 1.5s;
     }
 
     &:nth-child(n + 5) > div {
-      animation-delay: 1.2s;
+      animation-delay: 1.8s;
     }
   }
 
