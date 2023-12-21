@@ -33,54 +33,6 @@ export const Container = styled.button`
   border-radius: 20px;
   filter: opacity(1);
 
-  &:hover:before {
-    opacity: 1;
-    z-index: 2;
-  }
-
-  &::before,
-  &::after {
-    border-radius: inherit;
-    content: "";
-    opacity: 0;
-    position: absolute;
-    inset: 0;
-  }
-
-  &::before {
-    background: radial-gradient(
-      800px circle at var(--mouse-x) var(--mouse-y),
-      ${({ theme }) => theme.COLORS.CYAN},
-      transparent 40%
-    );
-    filter: opacity(0.2);
-  }
-
-  &::after {
-    background: radial-gradient(
-      600px circle at var(--mouse-x) var(--mouse-y),
-      ${({ theme }) => theme.COLORS.WHITE},
-      transparent 40%
-    );
-    z-index: 1;
-  }
-
-  > a {
-    position: absolute;
-    inset: 2px;
-    z-index: 2;
-    border-radius: inherit;
-    background: ${({ theme }) => theme.COLORS.GRADIENT};
-    color: ${({ theme }) => theme.COLORS.WHITE};
-    display: flex;
-    align-items: center;
-    gap: 2.4vw;
-    padding: 0 3.2rem;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-  }
-
   span {
     z-index: 3;
 
@@ -104,27 +56,57 @@ export const Container = styled.button`
     }
   }
 
+  &::before {
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y),
+      ${({ theme }) => theme.COLORS.WHITE},
+      transparent 40%
+    );
+  }
+
+  > a {
+    position: relative;
+    inset: 2px;
+    border-radius: inherit;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    display: flex;
+    align-items: center;
+    gap: 2.4vw;
+    padding: 0 3.2rem;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND};
+  }
+
   &:not(:hover) {
-    > a::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      animation: ${hideContent} 0.3s ease-in-out forwards;
-      background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    > a {
+      background: ${({ theme }) => theme.COLORS.GRADIENT};
     }
   }
 
   &:hover {
-    > a::before {
-      content: "";
-      display: block;
-      opacity: 0;
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
+    > a {
       animation: ${showContent} 0.3s ease-in-out forwards;
-      background: ${({ theme }) => theme.COLORS.BACKGROUND};
+      transform: scale(1);
+
+      &::after {
+        content: "";
+        border-radius: inherit;
+        inset: 0;
+        position: absolute;
+        opacity: 0.2;
+
+        background: radial-gradient(
+          600px circle at var(--mouse-x) var(--mouse-y),
+          ${({ theme }) => theme.COLORS.WHITE_50},
+          transparent 40%
+        );
+      }
     }
 
     span > svg {
