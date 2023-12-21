@@ -59,11 +59,13 @@ export const Container = styled.button`
   &::before {
     content: "";
     border-radius: inherit;
+    animation: ${showContent} 0.6s ease-in-out forwards;
     position: absolute;
     inset: 0;
+    
     background: radial-gradient(
       600px circle at var(--mouse-x) var(--mouse-y),
-      ${({ theme }) => theme.COLORS.WHITE},
+      ${({ theme }) => theme.COLORS.WHITE_50},
       transparent 40%
     );
   }
@@ -91,7 +93,7 @@ export const Container = styled.button`
 
   &:hover {
     > a {
-      animation: ${showContent} 0.3s ease-in-out forwards;
+      animation: ${showContent} 0.6s ease-in-out forwards;
       transform: scale(1);
 
       &::after {
