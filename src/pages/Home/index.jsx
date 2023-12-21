@@ -22,7 +22,11 @@ import { PiUsersThree ,
                <main>
                  <Header text="Olá, eu sou  " span="Geovane M.T" />
                  <div>
-                   <img src={profile} alt="Profile" />
+                   <div>
+                     <div>
+                       <img src={profile} alt="Profile" />
+                     </div>
+                   </div>
                    <ul>
                      <li>
                        <PiUsersThree />
@@ -43,7 +47,7 @@ import { PiUsersThree ,
                      </li>
                    </ul>
                  </div>
-               <Footer />
+                 <Footer />
                </main>
              </Container>
            )

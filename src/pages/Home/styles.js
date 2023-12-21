@@ -43,15 +43,58 @@ export const Container = styled.div`
       align-items: center;
       gap: 80px;
 
+      > div {
+        position: relative;
+        background: ${({ theme }) => theme.COLORS.BACKGROUND};
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: -16px 16px 32px 0px #020f20;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: -1rem 8rem;
+          background: linear-gradient(
+            315deg,
+            ${({ theme }) => theme.COLORS.BACKGROUND},
+            ${({ theme }) => theme.COLORS.BLUE},
+            ${({ theme }) => theme.COLORS.BACKGROUND}
+          );
+          transition: all 0.3s ease-in-out;
+          animation: animate 4s linear infinite;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0.4rem;
+          background: ${({ theme }) => theme.COLORS.BACKGROUND};
+          border-radius: 50%;
+        }
+
+        > div {
+          position: absolute;
+          inset: 1rem;
+          border: 0.4rem solid ${({ theme }) => theme.COLORS.BLUE};
+          border-radius: 50%;
+          z-index: 3;
+
+          > img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            pointer-events: none;
+          }
+        }
+      }
+
       &:last-child {
         background: none;
         margin-top: 0;
-      }
-
-      > img {
-        width: 240px;
-        border-radius: 50%;
-        box-shadow: -16px 16px 32px 0px #020f20;
       }
 
       > ul {
@@ -95,6 +138,15 @@ export const Container = styled.div`
       opacity: 1;
       transform: translateX(0);
       filter: blur(0);
+    }
+  }
+  @keyframes animate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
     }
   }
 `
