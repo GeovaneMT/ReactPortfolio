@@ -69,7 +69,7 @@ export const Container = styled.button`
   }
 
   > a {
-    position: relative;
+    position: absolute;
     inset: 2px;
     border-radius: inherit;
     color: ${({ theme }) => theme.COLORS.WHITE};
