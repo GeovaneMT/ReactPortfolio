@@ -62,7 +62,7 @@ export const Container = styled.button`
     animation: ${showContent} 0.6s ease-in-out forwards;
     position: absolute;
     inset: 0;
-    
+
     background: radial-gradient(
       600px circle at var(--mouse-x) var(--mouse-y),
       ${({ theme }) => theme.COLORS.WHITE_50},
@@ -113,10 +113,13 @@ export const Container = styled.button`
 
     span > svg {
       transition: all 0.3s ease-in-out;
-      display: none;
+      animation: ${hideContent} 0.6s ease-in-out forwards;
+      display:none;
       opacity: 0;
 
       &:last-child {
+        animation: ${showContent} 0.6s ease-in-out forwards;
+        transition: all 0.3s ease-in-out;
         display: block;
         opacity: 1;
       }
@@ -124,11 +127,13 @@ export const Container = styled.button`
 
     p {
       transition: all 0.3s ease-in-out;
-      display: none;
+      animation: ${hideContent} 0.6s ease-in-out forwards;
       opacity: 0;
 
       &:last-child {
-        display: block;
+        display: inherit;
+        transition: all 0.3s ease-in-out;
+        animation: ${showContent} 0.6s ease-in-out forwards;
         opacity: 1;
       }
     }
