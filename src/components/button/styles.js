@@ -35,6 +35,7 @@ export const Container = styled.button`
 
   &:hover:before {
     opacity: 1;
+    z-index: 2;
   }
 
   &::before,
@@ -53,7 +54,6 @@ export const Container = styled.button`
       transparent 40%
     );
     filter: opacity(0.2);
-    z-index: 3;
   }
 
   &::after {
