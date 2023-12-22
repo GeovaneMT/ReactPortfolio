@@ -36,49 +36,58 @@ export const Container = styled.div`
   > main {
     align-items: center;
     background-image: url({background});
+    justify-content: space-between;
 
     > div {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 80px;
 
       > div {
-        position: relative;
-        width: 240px;
-        height: 240px;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: -16px 16px 32px 0px #020f20;
-
-        &::before {
-          content: "";
-          position: absolute;
-          inset: -1rem 0rem;
-          background: linear-gradient(
-            315deg,
-            ${({ theme }) => theme.COLORS.BACKGROUND},
-            ${({ theme }) => theme.COLORS.BACKGROUND},
-            ${({ theme }) => theme.COLORS.BACKGROUND},
-            ${({ theme }) => theme.COLORS.BACKGROUND},
-            ${({ theme }) => theme.COLORS.BLUE},
-            ${({ theme }) => theme.COLORS.CYAN},
-            ${({ theme }) => theme.COLORS.BLUE},
-            ${({ theme }) => theme.COLORS.BACKGROUND},
-            ${({ theme }) => theme.COLORS.BACKGROUND},
-            ${({ theme }) => theme.COLORS.BACKGROUND},
-            ${({ theme }) => theme.COLORS.BACKGROUND}
-          );
-          animation: animate 4s linear infinite;
+        &:last-child {
+          display: flex;
+          height: 24rem;
+          flex-direction: column;
+          justify-content: space-evenly;
         }
 
-        > div {
-          position: absolute;
-          inset: .8rem;
+        &:first-child {
+          position: relative;
+          width: 24rem;
+          height: 24rem;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: -16px 16px 32px 0px #020f20;
 
-          > img {
-            width: 100%;
-            border-radius: 50%;
+          &::before {
+            content: "";
+            position: absolute;
+            inset: -1rem 0rem;
+            background: linear-gradient(
+              315deg,
+              ${({ theme }) => theme.COLORS.BACKGROUND},
+              ${({ theme }) => theme.COLORS.BACKGROUND},
+              ${({ theme }) => theme.COLORS.BACKGROUND},
+              ${({ theme }) => theme.COLORS.BACKGROUND},
+              ${({ theme }) => theme.COLORS.BLUE},
+              ${({ theme }) => theme.COLORS.CYAN},
+              ${({ theme }) => theme.COLORS.BLUE},
+              ${({ theme }) => theme.COLORS.BACKGROUND},
+              ${({ theme }) => theme.COLORS.BACKGROUND},
+              ${({ theme }) => theme.COLORS.BACKGROUND},
+              ${({ theme }) => theme.COLORS.BACKGROUND}
+            );
+            animation: animate 4s linear infinite;
+          }
+
+          > div {
+            position: absolute;
+            inset: 0.8rem;
+
+            > img {
+              width: 100%;
+              border-radius: 50%;
+            }
           }
         }
       }
@@ -110,11 +119,14 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: 769px) {
-    > main > div {
-      flex-direction: row;
-      gap: 0px;
-      width: 100%;
-      justify-content: space-evenly;
+    > main {
+      justify-content: center;
+      > div {
+        flex-direction: row;
+        gap: 0px;
+        width: 100%;
+        justify-content: space-evenly;
+      }
     }
   }
 

@@ -19,7 +19,7 @@ export const Container = styled.button`
 
     background: radial-gradient(
       600px circle at var(--mouse-x) var(--mouse-y),
-      ${({ theme }) => theme.COLORS.WHITE_50},
+      ${({ theme }) => theme.COLORS.WHITE},
       transparent 40%
     );
   }

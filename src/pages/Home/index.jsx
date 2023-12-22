@@ -20,32 +20,34 @@ import { PiUsersThree ,
                <Anchor text="Home" />
                <Menu />
                <main>
-                 <Header text="Olá, eu sou  " span="Geovane M.T" />
                  <div>
                    <div>
                      <div>
                        <img src={profile} alt="Profile" />
                      </div>
                    </div>
-                   <ul>
-                     <li>
-                       <PiUsersThree />
-                       Engenheiro de Software
-                     </li>
+                   <div>
+                     <Header text="Olá, eu sou  " span="Geovane M.T" />
+                     <ul>
+                       <li>
+                         <PiUsersThree />
+                         Engenheiro de Software
+                       </li>
 
-                     <li>
-                       <PiCodeBlock />
-                       Desenv. Full Stack
-                     </li>
-                     <li>
-                       <PiGear />
-                       UI | UX Designer
-                     </li>
-                     <li>
-                       <PiBuildings />
-                       Administrador
-                     </li>
-                   </ul>
+                       <li>
+                         <PiCodeBlock />
+                         Desenv. Full Stack
+                       </li>
+                       <li>
+                         <PiGear />
+                         UI | UX Designer
+                       </li>
+                       <li>
+                         <PiBuildings />
+                         Administrador
+                       </li>
+                     </ul>
+                   </div>
                  </div>
                  <Footer />
                </main>

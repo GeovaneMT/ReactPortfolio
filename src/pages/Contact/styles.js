@@ -5,7 +5,7 @@ export const Container = styled.div`
   overflow: hidden;
 
   @media screen and (min-width: 769px) {
-    > main > div {
+    > main > div:nth-child(2) {
       display: grid;
       grid-template-rows: 2fr 1fr;
       grid-template-areas:
