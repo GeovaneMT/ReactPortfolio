@@ -3,20 +3,36 @@ import { keyframes } from "styled-components"
 
 const showContent = keyframes`
   from {
+    display:none;
     opacity: 0;
     width: 0;
+
   }
   to {
+    display: inherit;
     opacity: 1;
     width: 100%;
   }
 `
+const Show = keyframes`
+  from {
+    display:none;
+    opacity: 0;
+
+  }
+  to {
+    display: inherit;
+    opacity: 1;
+  }
+`
 const hideContent = keyframes`
   from {
+    display: inherit;
     opacity: 1;
     width: 100%;
   }
   to {
+    display:none;
     opacity: 0;
     width: 0;
   }
@@ -32,6 +48,7 @@ export const Container = styled.button`
   margin: 1.6rem auto 0;
   border-radius: 20px;
   filter: opacity(1);
+  transition: all 0.3s ease-in-out;
 
   span {
     z-index: 3;
@@ -51,15 +68,14 @@ export const Container = styled.button`
     z-index: 3;
 
     &:last-child {
-      display: none;
       opacity: 0;
+      display: none;
     }
   }
 
   &::before {
     content: "";
     border-radius: inherit;
-    animation: ${showContent} 0.6s ease-in-out forwards;
     position: absolute;
     inset: 0;
 
@@ -72,7 +88,7 @@ export const Container = styled.button`
 
   > a {
     position: absolute;
-    inset: 2px;
+    inset: 0.2rem;
     border-radius: inherit;
     color: ${({ theme }) => theme.COLORS.WHITE};
     display: flex;
@@ -87,7 +103,35 @@ export const Container = styled.button`
 
   &:not(:hover) {
     > a {
-      background: ${({ theme }) => theme.COLORS.GRADIENT};
+      background: none;
+
+      &::after {
+        content: "";
+        border-radius: inherit;
+        inset: 0rem;
+        position: absolute;
+        background: ${({ theme }) => theme.COLORS.GRADIENT};
+        z-index: 1;
+      }
+
+      p:nth-child(2),
+      span > svg:first-child {
+        animation: ${Show} 0.6s 0.3s ease-in-out forwards;
+        display: flex;
+        opacity: 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      border-radius: inherit;
+      inset: 0.2rem;
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: ${({ theme }) => theme.COLORS.BACKGROUND};
+      animation: ${hideContent} 0.3s ease-in-out forwards;
     }
   }
 
@@ -111,31 +155,16 @@ export const Container = styled.button`
       }
     }
 
-    span > svg {
-      transition: all 0.3s ease-in-out;
-      animation: ${hideContent} 0.6s ease-in-out forwards;
-      display:none;
-      opacity: 0;
-
-      &:last-child {
-        animation: ${showContent} 0.6s ease-in-out forwards;
-        transition: all 0.3s ease-in-out;
-        display: block;
-        opacity: 1;
-      }
+    span > svg:last-child,
+    a > p:last-child {
+      animation: ${Show} 0.6s 0.6s ease-in-out forwards;
+      display: flex;
     }
 
-    p {
-      transition: all 0.3s ease-in-out;
+    p:nth-child(2),
+    span > svg:first-child {
+      display: none;
       animation: ${hideContent} 0.6s ease-in-out forwards;
-      opacity: 0;
-
-      &:last-child {
-        display: inherit;
-        transition: all 0.3s ease-in-out;
-        animation: ${showContent} 0.6s ease-in-out forwards;
-        opacity: 1;
-      }
     }
   }
 
