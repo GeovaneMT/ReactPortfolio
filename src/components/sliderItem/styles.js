@@ -38,9 +38,6 @@ export const Container = styled.div`
   }
 
   > div {
-    display: flex;
-    place-content: center;
-    align-items: center;
     width: 12rem;
     height: 12rem;
     border-radius: 20px;
@@ -54,25 +51,33 @@ export const Container = styled.div`
       filter: opacity(1);
       transform: scale(1.3);
     }
+    
+    > div {
+      display: flex;
+      place-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &.styled {
     > main {
       div {
-        animation: ${showContent} .6s ease-in-out forwards;
+        animation: ${showContent} 0.6s ease-in-out forwards;
       }
 
       div:nth-child(2) {
-        animation-delay: .3s;
+        animation-delay: 0.3s;
       }
     }
 
     > div {
-      animation: ${showContent} .6s .6s ease-in-out forwards;
+      animation: ${showContent} 0.6s 0.6s ease-in-out forwards;
     }
 
     &:nth-child(n + 2) > div {
-      animation-delay: .9s;
+      animation-delay: 0.9s;
     }
 
     &:nth-child(n + 3) > div {

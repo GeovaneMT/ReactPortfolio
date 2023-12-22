@@ -36,8 +36,10 @@ export const Item = ({
         </div>
       </main>
       <div>
-        <img src={icon} alt={title} />
-        {/* Add alt attribute for accessibility */}
+        <div>
+          <img src={icon} alt={title} />
+          {/* Add alt attribute for accessibility */}
+        </div>
       </div>
     </Container>
   )

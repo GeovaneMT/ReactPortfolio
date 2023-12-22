@@ -11,6 +11,6 @@ export const Container = styled.div`
   border-radius: 20px;
 
   p {
-    margin-bottom: 12vh;
+    margin-bottom: 10vh;
   }
 `

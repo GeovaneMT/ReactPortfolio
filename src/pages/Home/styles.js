@@ -45,7 +45,6 @@ export const Container = styled.div`
 
       > div {
         position: relative;
-        background: ${({ theme }) => theme.COLORS.BACKGROUND};
         width: 240px;
         height: 240px;
         border-radius: 50%;
@@ -70,23 +69,16 @@ export const Container = styled.div`
             ${({ theme }) => theme.COLORS.BACKGROUND},
             ${({ theme }) => theme.COLORS.BACKGROUND}
           );
-          transition: all 0.3s ease-in-out;
           animation: animate 4s linear infinite;
         }
 
         > div {
           position: absolute;
           inset: .8rem;
-          border-radius: 50%;
-          z-index: 3;
 
           > img {
-            position: absolute;
-            inset: 0;
             width: 100%;
             border-radius: 50%;
-            object-fit: cover;
-            pointer-events: none;
           }
         }
       }

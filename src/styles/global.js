@@ -72,7 +72,7 @@ export default createGlobalStyle`
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 0 8vw 12vh;
+    padding: 0 8vw 8vh;
     gap: 80px;
     }
 
