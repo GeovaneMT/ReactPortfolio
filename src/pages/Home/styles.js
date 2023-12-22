@@ -92,11 +92,6 @@ export const Container = styled.div`
         }
       }
 
-      &:last-child {
-        background: none;
-        margin-top: 0;
-      }
-
       > ul {
         width: max-content;
       }

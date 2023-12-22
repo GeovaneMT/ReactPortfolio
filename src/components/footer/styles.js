@@ -1,9 +1,8 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-
+  text-align: center;
   color: ${({ theme }) => theme.COLORS.WHITE};
-  background: ${({ theme }) => theme.COLORS.GRADIENT};
 
   padding: 32px;
   border-radius: 20px;
