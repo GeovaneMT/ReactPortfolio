@@ -9,7 +9,7 @@ export const Container = styled.div`
   z-index: 2;
 
   p {
-    margin-bottom: 12vh;
+    margin-bottom: 18vh;
   }
 
   @media screen and (min-width: 769px) {
