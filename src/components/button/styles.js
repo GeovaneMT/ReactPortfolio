@@ -1,42 +1,4 @@
 import styled from "styled-components"
-import { keyframes } from "styled-components"
-
-const showContent = keyframes`
-  from {
-    display:none;
-    opacity: 0;
-    width: 0;
-
-  }
-  to {
-    display: inherit;
-    opacity: 1;
-    width: 100%;
-  }
-`
-const Show = keyframes`
-  from {
-    display:none;
-    opacity: 0;
-
-  }
-  to {
-    display: inherit;
-    opacity: 1;
-  }
-`
-const hideContent = keyframes`
-  from {
-    display: inherit;
-    opacity: 1;
-    width: 100%;
-  }
-  to {
-    display:none;
-    opacity: 0;
-    width: 0;
-  }
-`
 
 export const Container = styled.button`
   color: ${({ theme }) => theme.COLORS.WHITE};
@@ -48,30 +10,6 @@ export const Container = styled.button`
   margin: 1.6rem auto 0;
   border-radius: 20px;
   filter: opacity(1);
-  transition: all 0.3s ease-in-out;
-
-  span {
-    z-index: 3;
-
-    svg {
-      &:last-child {
-        display: none;
-        opacity: 0;
-      }
-    }
-  }
-
-  p {
-    transition: all 0.3s ease-in-out;
-    opacity: 1;
-    display: block;
-    z-index: 3;
-
-    &:last-child {
-      opacity: 0;
-      display: none;
-    }
-  }
 
   &::before {
     content: "";
@@ -87,65 +25,87 @@ export const Container = styled.button`
   }
 
   > a {
-    position: absolute;
-    inset: 0.2rem;
-    border-radius: inherit;
-    color: ${({ theme }) => theme.COLORS.WHITE};
     display: flex;
-    align-items: center;
-    gap: 2.4vw;
-    padding: 0 3.2rem;
+    position: absolute;
     width: 100%;
     height: 100%;
-    transition: all 0.3s ease-in-out;
+    inset: 0.2rem;
+    gap: 2.4vw;
+    padding: 0 3.2rem;
+    align-items: center;
+    border-radius: inherit;
+    color: ${({ theme }) => theme.COLORS.WHITE};
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
-  }
+    z-index: 1;
 
-  &:not(:hover) {
-    > a {
-      background: none;
-
-      &::after {
-        content: "";
-        border-radius: inherit;
-        inset: 0rem;
-        position: absolute;
-        background: ${({ theme }) => theme.COLORS.GRADIENT};
-        z-index: 1;
-      }
-
-      p:nth-child(2),
-      span > svg:first-child {
-        animation: ${Show} 0.6s 0.3s ease-in-out forwards;
-        display: flex;
-        opacity: 0;
-      }
-    }
-
-    &::after {
+    &::before {
       content: "";
-      border-radius: inherit;
-      inset: 0.2rem;
       position: absolute;
-      z-index: 0;
+      border-radius: inherit;
+      inset: 0;
       width: 100%;
       height: 100%;
-      background: ${({ theme }) => theme.COLORS.BACKGROUND};
-      animation: ${hideContent} 0.3s ease-in-out forwards;
+      transform: scaleX(1);
+      transform-origin: right;
+      transition: all 0.6s ease-in-out;
+
+      z-index: -1;
+      background: ${({ theme }) => theme.COLORS.GRADIENT};
     }
+
+    > p {
+      transition: all 0.6s ease-in-out;
+      text-align: left;
+
+      &:nth-child(2) {
+        opacity: 1;
+        width: max-content;
+        transition-delay: 0.6s;
+      }
+      &:last-child {
+        opacity: 0;
+        width: 0;
+        transition: none;
+      }
+    }
+    //txt changes ^
+    //icon changes
+    span > svg {
+      transition: all 0.6s ease-in-out;
+
+      &:first-child {
+        opacity: 1;
+        width: max-content;
+        transition-delay: 0.6s;
+      }
+
+      &:last-child {
+        opacity: 0;
+        width: 0;
+        animation:none;
+      }
+    }
+    //icon changes ^
   }
 
   &:hover {
-    > a {
-      animation: ${showContent} 0.6s ease-in-out forwards;
+    //txt changes
+    a {
       transform: scale(1);
+
+      &::before {
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: all 0.6s ease-in-out;
+        opacity: 0;
+      }
 
       &::after {
         content: "";
         border-radius: inherit;
-        inset: 0;
         position: absolute;
-        opacity: 0.2;
+        inset: 0;
+        filter: opacity(0.2);
 
         background: radial-gradient(
           600px circle at var(--mouse-x) var(--mouse-y),
@@ -153,19 +113,39 @@ export const Container = styled.button`
           transparent 40%
         );
       }
-    }
 
-    span > svg:last-child,
-    a > p:last-child {
-      animation: ${Show} 0.6s 0.6s ease-in-out forwards;
-      display: flex;
-    }
+      > p {
+        transition: all 0.6s ease-in-out;
 
-    p:nth-child(2),
-    span > svg:first-child {
-      display: none;
-      animation: ${hideContent} 0.6s ease-in-out forwards;
+        &:nth-child(2) {
+          opacity: 0;
+          width: 0;
+          transition: none;
+        }
+        &:last-child {
+          opacity: 1;
+          width: max-content;
+          transition-delay: 0.6s;
+        }
+      }
     }
+    //txt changes
+    //icon changes
+    span > svg {
+      transition: all 0.6s ease-in-out;
+
+      &:first-child {
+        opacity: 0;
+        width: 0;
+        transition: none;
+      }
+      &:last-child {
+        opacity: 1;
+        width: max-content;
+        transition-delay: 0.6s;
+      }
+    }
+    //icon changes
   }
 
   @media screen and (min-width: 769px) {
