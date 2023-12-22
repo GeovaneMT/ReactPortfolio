@@ -7,7 +7,6 @@ export const Container = styled.button`
   gap: 2.4vw;
   width: 75%;
   height: 5.6rem;
-  margin: 1.6rem auto 0;
   border-radius: 20px;
   filter: opacity(1);
 

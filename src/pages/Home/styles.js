@@ -128,6 +128,10 @@ export const Container = styled.div`
         justify-content: space-evenly;
       }
     }
+
+    p:last-child {
+      margin: 0;
+    }
   }
 
   @keyframes showContent {
