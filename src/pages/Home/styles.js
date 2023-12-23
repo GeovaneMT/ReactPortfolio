@@ -52,7 +52,7 @@ export const Container = styled.div`
       margin-right: -13vw;
       background: linear-gradient(
         180deg,
-        rgba(2, 15, 32, 0) ,
+        rgba(2, 15, 32, 0),
         rgba(2, 15, 32, 1) 90%
       );
 
@@ -155,10 +155,12 @@ export const Container = styled.div`
       > div:nth-child(2) {
         padding-top: 16vh;
         padding-bottom: 16vh;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8vw;
       }
 
       > section {
-        padding-top: 32vh;
         padding-bottom: 0;
 
         > div > div:nth-child(2) {
