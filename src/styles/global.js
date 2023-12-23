@@ -63,7 +63,7 @@ export default createGlobalStyle`
     > div > div > *,
     > div > div > main > * {
       opacity: 0;
-      animation: ${showContent} 1.2s ease-in-out forwards;
+      animation: ${showContent} 0.6s ease-in-out forwards;
     }
 
     > div > div > main {
