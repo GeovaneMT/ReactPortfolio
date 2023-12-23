@@ -32,7 +32,7 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   transform: translateX(-50%);
-  width: calc(75% - 8vw);
+  width: 100%;
   height: 5.6rem;
   bottom: 32px;
   left: 50%;
