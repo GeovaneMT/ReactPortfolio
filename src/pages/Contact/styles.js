@@ -32,7 +32,7 @@ export const Container = styled.div`
           "child2 child3 child4";
         gap: 20px;
 
-        &:hover > button:after {
+        &:hover > button:after, &:active > button:after {
           opacity: 1;
         }
 

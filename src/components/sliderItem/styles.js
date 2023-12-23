@@ -48,7 +48,8 @@ export const Container = styled.div`
     opacity: 0;
     margin-left: 2rem;
 
-    &:hover {
+    &:hover,
+    &:active {
       filter: opacity(1);
       transform: scale(1.3);
     }

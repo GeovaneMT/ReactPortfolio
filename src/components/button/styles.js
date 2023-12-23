@@ -87,7 +87,7 @@ export const Container = styled.button`
     //icon changes ^
   }
 
-  &:hover {
+  &:hover, &:active {
     //txt changes
     a {
       transform: scale(1);

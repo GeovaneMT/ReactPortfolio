@@ -173,7 +173,7 @@ export const Container = styled.div`
         }
       }
 
-      &:hover > button:after {
+      &:hover > button:after, &:active > button:after {
         opacity: 1;
       }
 
