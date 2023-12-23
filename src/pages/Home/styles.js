@@ -52,8 +52,8 @@ export const Container = styled.div`
       margin-right: -13vw;
       background: linear-gradient(
         180deg,
-        rgba(2, 15, 32, 0),
-        rgba(2, 15, 32, 1) 80%
+        rgba(2, 15, 32, 0) ,
+        rgba(2, 15, 32, 1) 90%
       );
 
       > div {
