@@ -34,6 +34,7 @@ export const Container = styled.div`
 
     div:nth-child(2) {
       opacity: 0;
+      height: 90px;
     }
   }
 
@@ -51,7 +52,7 @@ export const Container = styled.div`
       filter: opacity(1);
       transform: scale(1.3);
     }
-    
+
     > div {
       display: flex;
       place-content: center;
