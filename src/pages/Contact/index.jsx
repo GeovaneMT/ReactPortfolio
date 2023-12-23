@@ -65,17 +65,18 @@ export const Contact = () => {
       <Menu />
       <Anchor text="Contato" />
       <main>
+        <div>
         <Header text="Sinta-se à vontade para entrar em " span="Contato" />
-
-        <div id="cards">
-          {socialButtons.map((button, index) => (
-            <Button
-              key={index}
-              icon={button.icon}
-              title={button.title}
-              to={button.link}
-            />
-          ))}
+          <div id="cards">
+            {socialButtons.map((button, index) => (
+              <Button
+                key={index}
+                icon={button.icon}
+                title={button.title}
+                to={button.link}
+              />
+            ))}
+          </div>
         </div>
         <Footer />
       </main>
