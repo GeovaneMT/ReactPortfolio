@@ -38,6 +38,7 @@ export default createGlobalStyle`
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   html {
