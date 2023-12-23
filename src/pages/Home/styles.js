@@ -158,8 +158,8 @@ export const Container = styled.div`
       }
 
       > section {
-        padding-top: 16vh;
-        padding-bottom: 16vh;
+        padding-top: 32vh;
+        padding-bottom: 0;
 
         > div > div:nth-child(2) {
           display: grid;
