@@ -4,13 +4,11 @@ export const Container = styled.div`
   height: 100%;
   overflow: hidden;
 
-  > main > div {
-    &:nth-child(2) {
+  > main > div:nth-child(2) {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 1.6vh;
-    }
   }
 
   @media screen and (min-width: 769px) {

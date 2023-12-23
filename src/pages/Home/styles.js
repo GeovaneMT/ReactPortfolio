@@ -34,14 +34,27 @@ export const Container = styled.div`
   }
 
   > main {
-    align-items: center;
-    background-image: url({background});
-    justify-content: space-between;
+    padding-bottom: 0;
+    > p:first-child {
+      position: fixed;
+      margin-left: -8vw;
+      width: 100%;
+    }
 
-    > div {
+    gap: 0;
+    > div:nth-child(2) {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 14vh 0 0 0;
+      gap: 4vh;
+      margin-left: -8vw;
+      margin-right: -13vw;
+      background: linear-gradient(
+        180deg,
+        rgba(2, 15, 32, 0),
+        rgba(2, 15, 32, 1) 80%
+      );
 
       > div {
         &:last-child {
@@ -97,6 +110,30 @@ export const Container = styled.div`
       }
     }
 
+    > section {
+      padding: 14vh 13vw 0 8vw;
+      margin-left: -8vw;
+      margin-right: -13vw;
+      display: flex;
+      gap: 8rem;
+      flex-direction: column;
+      background: ${({ theme }) => theme.COLORS.BACKGROUND};
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+
+        > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.6vh;
+          width: 100%;
+        }
+      }
+    }
+
     > :nth-child(1),
     > :nth-child(2),
     > :nth-child(3) {
@@ -115,17 +152,49 @@ export const Container = styled.div`
 
   @media screen and (min-width: 769px) {
     > main {
-      justify-content: center;
-      > div {
-        flex-direction: row;
-        gap: 0px;
-        width: 100%;
-        justify-content: space-evenly;
+      > div:nth-child(2) {
+        padding-top: 16vh;
+        padding-bottom: 16vh;
       }
-    }
 
-    p:last-child {
-      margin: 0;
+      > section {
+        padding-top: 16vh;
+        padding-bottom: 16vh;
+
+        > div > div:nth-child(2) {
+          display: grid;
+          grid-template-rows: 2fr 1fr;
+          grid-template-areas:
+            "child2 child1 child1"
+            "child2 child3 child4";
+          gap: 20px;
+        }
+      }
+
+      &:hover > button:after {
+        opacity: 1;
+      }
+
+      &:last-child > p {
+        margin-bottom: 4vh;
+      }
+
+      button {
+        &:nth-child(1) {
+          grid-area: child1;
+          height: 100%;
+        }
+        &:nth-child(2) {
+          height: 100%;
+          grid-area: child2;
+        }
+        &:nth-child(3) {
+          grid-area: child3;
+        }
+        &:nth-child(4) {
+          grid-area: child4;
+        }
+      }
     }
   }
 

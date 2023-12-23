@@ -8,12 +8,13 @@ export const Container = styled.div`
   border-radius: 20px;
   z-index: 2;
 
-  p {
-    margin-bottom: 18vh;
+  > p {
+    margin-bottom: 14vh;
   }
 
   @media screen and (min-width: 769px) {
-    p {
+
+    > p {
       margin-bottom: 8vh;
     }
   }
