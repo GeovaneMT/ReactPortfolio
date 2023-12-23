@@ -155,7 +155,7 @@ export const Container = styled.div`
       > div:nth-child(2) {
         padding-top: 16vh;
         padding-bottom: 16vh;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: center;
         gap: 8vw;
       }
