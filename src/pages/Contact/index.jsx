@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 //page styles and functions
 import { Container } from "./styles"
