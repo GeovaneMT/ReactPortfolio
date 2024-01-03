@@ -17,30 +17,16 @@ export const Container = styled.div`
     overflow: hidden;
   }
 
-  li {
-    display: flex;
-    gap: 4px;
-  }
-
-  li,
-  h2 {
-    text-shadow: 0px 4px 4px #020f20;
-  }
-
-  li svg {
-    filter: drop-shadow(0px 4px 4px #020f20);
-    color: ${({ theme }) => theme.COLORS.CYAN};
-  }
-
   > main {
+    gap: 0;
     padding-bottom: 0;
+
     > p:first-child {
       position: fixed;
       margin-left: -8vw;
       width: 100%;
     }
 
-    gap: 0;
     > div:nth-child(2) {
       display: flex;
       flex-direction: column;
@@ -56,13 +42,6 @@ export const Container = styled.div`
       );
 
       > div {
-        &:last-child {
-          display: flex;
-          height: 24rem;
-          flex-direction: column;
-          justify-content: space-evenly;
-        }
-
         &:first-child {
           position: relative;
           width: 24rem;
@@ -102,6 +81,30 @@ export const Container = styled.div`
             }
           }
         }
+
+        &:last-child {
+
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          ul {
+            li {
+              display: flex;
+              gap: 4px;
+            }
+
+            li,
+            h2 {
+              text-shadow: 0px 4px 4px #020f20;
+            }
+
+            li svg {
+              filter: drop-shadow(0px 4px 4px #020f20);
+              color: ${({ theme }) => theme.COLORS.CYAN};
+            }
+          }
+        }
       }
 
       > ul {
@@ -117,85 +120,6 @@ export const Container = styled.div`
       gap: 8rem;
       flex-direction: column;
       background: ${({ theme }) => theme.COLORS.BACKGROUND};
-
-      > div {
-        display: flex;
-        flex-direction: column;
-        gap: 8rem;
-
-        > div:nth-child(2) {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 1.6vh;
-          width: 100%;
-        }
-      }
-    }
-
-    > :nth-child(1),
-    > :nth-child(2),
-    > :nth-child(3) {
-      animation: showContent 0.4s ease-in-out forwards;
-      opacity: 0;
-    }
-
-    > :nth-child(2) {
-      animation-delay: 0.4s;
-    }
-
-    > :nth-child(3) {
-      animation-delay: 0.8s;
-    }
-  }
-
-  @media screen and (min-width: 769px) {
-    > main {
-      > div:nth-child(2) {
-        padding-top: 16vh;
-        padding-bottom: 16vh;
-        flex-direction: row-reverse;
-        justify-content: center;
-        gap: 8vw;
-      }
-
-      > section {
-        padding-bottom: 0;
-
-        > div > div:nth-child(2) {
-          display: grid;
-          grid-template-rows: 2fr 1fr;
-          grid-template-areas:
-            "child2 child1 child1"
-            "child2 child3 child4";
-          gap: 20px;
-        }
-      }
-
-      &:hover > button:after, &:active > button:after {
-        opacity: 1;
-      }
-
-      &:last-child > p {
-        margin-bottom: 4vh;
-      }
-
-      button {
-        &:nth-child(1) {
-          grid-area: child1;
-          height: 100%;
-        }
-        &:nth-child(2) {
-          height: 100%;
-          grid-area: child2;
-        }
-        &:nth-child(3) {
-          grid-area: child3;
-        }
-        &:nth-child(4) {
-          grid-area: child4;
-        }
-      }
     }
   }
 

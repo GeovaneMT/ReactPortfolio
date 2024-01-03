@@ -1,29 +1,23 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  height: 100%;
-  overflow: hidden;
+  justify-content: space-between;
 
   > main {
-    justify-content: space-between;
-
-    > div {
-
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    
+    > div:nth-child(2) {
       display: flex;
       flex-direction: column;
-      gap: 8rem;
-
-      > div:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.6vh;
-      }
+      align-items: center;
+      gap: 1.6vh;
     }
   }
 
   @media screen and (min-width: 769px) {
-    > main > div {
+    > main {
       > div:nth-child(2) {
         display: grid;
         grid-template-rows: 2fr 1fr;
@@ -32,7 +26,8 @@ export const Container = styled.div`
           "child2 child3 child4";
         gap: 20px;
 
-        &:hover > button:after, &:active > button:after {
+        &:hover > button:after,
+        &:active > button:after {
           opacity: 1;
         }
 
