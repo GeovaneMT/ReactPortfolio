@@ -2,7 +2,7 @@ import React from "react"
 import { useLocation, Link } from "react-router-dom"
 
 import { Container, MenuIcon } from "./styles"
-import { Icons } from "./Icons"
+import { Icons } from "./icons"
 import { effect } from "./effect"
 
 export const Menu = ({ ...rest }) => {
