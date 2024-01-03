@@ -1,5 +1,7 @@
 import styled from "styled-components"
+import theme from "../../styles/theme"
 import { keyframes } from "styled-components"
+
 
 const showContent = keyframes`
   from {
@@ -21,6 +23,13 @@ const hideContent = keyframes`
     opacity: 0;
     transform: translate(-50%, 200%)
   }
+`
+
+export const MenuIcon = styled.span`
+  color: ${({ $active }) =>
+    $active === "true" ? theme.COLORS.WHITE : theme.COLORS.WHITE_50};
+  cursor: ${({ $active }) => ($active === "true" ? "default" : "pointer")};
+  transition: all 0.3s ease-in-out;
 `
 
 export const Container = styled.div`
@@ -55,7 +64,8 @@ export const Container = styled.div`
     font-size: 3.2rem;
   }
 
-  a:hover span, a:active span {
+  a:hover span,
+  a:active span {
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 

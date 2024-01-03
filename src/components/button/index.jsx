@@ -12,12 +12,13 @@ export const Button = ({
   to = "",
   ...rest
 }) => {
+
   const iconStyles = {
     fontSize: iconSize,
     color: iconColor,
   }
-
-  const buttonOrLink = to ? (
+  
+  return to ? (
     <Container>
       <Link target="_blank" rel="noreferrer" to={to} {...rest}>
         <span style={iconStyles}>
@@ -35,6 +36,4 @@ export const Button = ({
       <p>{fixedTitle}</p>
     </Container>
   )
-
-  return buttonOrLink
 }

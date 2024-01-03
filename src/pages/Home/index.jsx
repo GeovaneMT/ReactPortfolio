@@ -26,7 +26,7 @@ export const Home = () => {
         <div>
           <div>
             <div>
-              <img src={profile} alt="Profile" />
+              <img src={profile} alt="Foto de perfil de Geovane" />
             </div>
           </div>
           <div>
