@@ -4,8 +4,9 @@ export const Container = styled.div`
   height: 100%;
   overflow: hidden;
 
-  > main > h2 {
-    
+  > main {
+
+    > h2 {
       display: flex;
       flex-direction: column-reverse;
       gap: 2vh;
@@ -13,6 +14,7 @@ export const Container = styled.div`
       > span {
         width: 100%;
       }
+    }
 
     > p {
       text-align: justify;
