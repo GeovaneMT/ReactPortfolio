@@ -21,20 +21,13 @@ export const Container = styled.div`
     gap: 0;
     padding-bottom: 0;
 
-    > p:first-child {
-      position: fixed;
-      margin-left: -8vw;
-      width: 100%;
-    }
-
-    > div:nth-child(2) {
+    > div {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 14vh 0 0 0;
-      gap: 4vh;
-      margin-left: -8vw;
-      margin-right: -13vw;
+      margin: 8vh -13vw 0 -8vw;
+      gap: 8vh;
+      
       background: linear-gradient(
         180deg,
         rgba(2, 15, 32, 0),
@@ -83,7 +76,6 @@ export const Container = styled.div`
         }
 
         &:last-child {
-
           display: flex;
           flex-direction: column;
           gap: 2rem;
@@ -114,12 +106,19 @@ export const Container = styled.div`
 
     > section {
       padding: 14vh 13vw 0 8vw;
-      margin-left: -8vw;
-      margin-right: -13vw;
+      margin: 0 -13vw 13vh -8vw;
       display: flex;
       gap: 8rem;
       flex-direction: column;
       background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    > main > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
   }
 

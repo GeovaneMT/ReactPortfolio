@@ -21,8 +21,8 @@ export const Home = () => {
   return (
     <Container>
       <Menu />
+      <Anchor text="Home" />
       <main>
-        <Anchor text="Home" />
         <div>
           <div>
             <div>
