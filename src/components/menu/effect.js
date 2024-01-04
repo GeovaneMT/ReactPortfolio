@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 
 export const effect = () => {
-
   useEffect(() => {
     const barra = document.querySelector(".barra")
     const main = document.querySelector("main")
@@ -10,9 +9,9 @@ export const effect = () => {
       let lastScrollPosition = main.scrollTop
 
       const handleScroll = () => {
-        const goingUp = main.scrollTop < lastScrollPosition
-        const atBottom =
-          main.scrollHeight - main.scrollTop === main.clientHeight
+        const { scrollTop, scrollHeight, clientHeight } = main
+        const goingUp = scrollTop < lastScrollPosition
+        const atBottom = scrollHeight - scrollTop === clientHeight
 
         if (goingUp || atBottom) {
           barra.classList.remove("hide")
@@ -22,7 +21,7 @@ export const effect = () => {
           barra.classList.add("hide")
         }
 
-        lastScrollPosition = main.scrollTop
+        lastScrollPosition = scrollTop
       }
 
       main.addEventListener("scroll", handleScroll)

@@ -2,25 +2,26 @@ import { useEffect } from "react"
 
 export const Effect = (mainRef, itemsConfig) => {
   useEffect(() => {
-    const sliderItems = mainRef.current.querySelectorAll(".item")
+    const { current: selector } = mainRef
+    const sliderItems = selector.querySelectorAll(".item")
 
     const handleItemClick = (item) => {
       sliderItems.forEach((item) => {
         item.classList.remove("styled")
       })
 
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         sliderItems.forEach((item) => {
           item.classList.add("styled")
         })
-      }, 0)
+      })
 
-      if (mainRef.current) {
-        const firstItem = mainRef.current.querySelector(".item")
+      if (selector) {
+        const firstItem = selector.querySelector(".item")
 
         if (firstItem && firstItem !== item) {
-          mainRef.current.insertBefore(item, firstItem)
-          mainRef.current.append(firstItem)
+          selector.insertBefore(item, firstItem)
+          selector.append(firstItem)
         }
       }
     }

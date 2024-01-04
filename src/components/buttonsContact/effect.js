@@ -2,10 +2,14 @@ import { useEffect } from "react"
 
 export const effect = () => {
   const handleMouseMove = (e) => {
-    for (const card of document.querySelectorAll("button")) {
-      const rect = card.getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top
+    const buttonElements = document.querySelectorAll("button")
+
+    for (const card of buttonElements) {
+      const rect = card.getBoundingClientRect()
+      const { clientX, clientY } = e
+      const { left, top } = rect
+      const x = clientX - left
+      const y = clientY - top
 
       card.style.setProperty("--mouse-x", `${x}px`)
       card.style.setProperty("--mouse-y", `${y}px`)
