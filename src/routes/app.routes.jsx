@@ -4,9 +4,10 @@ import { Loading } from "../pages/Loading"
 import { useRouteLoader } from "./routeLoader"
 
 export function AppRoutes() {
-  const location = useLocation()
-  const { components, isLoading } = useRouteLoader(location)
 
+  const { components, isLoading } = useRouteLoader(useLocation())
+
+  // Display loading page if still loading or components are not available
   if (isLoading || !components) {
     console.log("Loading page is being displayed")
     return <Loading />
