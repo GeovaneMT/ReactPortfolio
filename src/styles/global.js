@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components"
 import { keyframes } from "styled-components"
 
+// FONTS
+import { MainFontFace } from "./fonts"
+
 const showContent = keyframes`
   from {
     opacity: 0;
@@ -84,8 +87,16 @@ export default createGlobalStyle`
     margin: 0;
   }
 
+  ${MainFontFace};
   body, input, button, textarea {
-    font-family: 'Plus Jakarta Sans', serif;
+    font-family: 
+    'Sansation',
+    'Sansation-Italic',
+    'Sansation-Light',
+    'Sansation-Light-Italic',
+    'Sansation-Bold',
+    'Sansation-Bold-Italic',
+    sans-serif;
     font-size: ${({ theme }) => theme.COLORS.FSBODY};
     outline: none;
   }
