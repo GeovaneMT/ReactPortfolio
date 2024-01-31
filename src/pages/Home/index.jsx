@@ -7,6 +7,7 @@ import { Container } from "./styles"
 import { Anchor } from "../../components/anchor"
 import { Header } from "../../components/header"
 import { Menu } from "../../components/menu"
+import { Linkedin } from "../../components/linkedin"
 import { Footer } from "../../components/footer"
 import { ButtonsContact } from "../../components/buttonsContact"
 
@@ -49,6 +50,7 @@ export const Home = () => {
                 Administrador
               </li>
             </ul>
+            <Linkedin/>
           </div>
         </div>
         <section>
