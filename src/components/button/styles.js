@@ -1,6 +1,8 @@
 import styled from "styled-components"
+import { Sansation } from "../../styles/fonts"
 
 export const Container = styled.button`
+  ${Sansation}
   color: ${({ theme }) => theme.COLORS.WHITE};
   background: ${({ theme }) => theme.COLORS.GRADIENT};
   display: flex;
@@ -60,6 +62,7 @@ export const Container = styled.button`
         opacity: 1;
         width: max-content;
         transition-delay: 0.6s;
+        font-family: ${({ theme }) => theme.FONT.HIGHLIGHTS};
       }
       &:last-child {
         opacity: 0;
@@ -69,7 +72,7 @@ export const Container = styled.button`
     }
     //txt changes ^
     //icon changes
-    span > svg {
+    div > svg {
       transition: all 0.6s ease-in-out;
 
       &:first-child {
@@ -81,13 +84,14 @@ export const Container = styled.button`
       &:last-child {
         opacity: 0;
         width: 0;
-        animation:none;
+        animation: none;
       }
     }
     //icon changes ^
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     //txt changes
     a {
       transform: scale(1);

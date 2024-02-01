@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import { Sansation } from "../../styles/fonts"
 
 const showContent = keyframes`
   from {
@@ -9,8 +10,10 @@ const showContent = keyframes`
     filter: blur(0) opacity(inherit);
   }
 `
-
 export const Container = styled.div`
+
+  ${Sansation}
+
   display: flex;
   flex-direction: column;
   gap: 7rem;
@@ -25,16 +28,17 @@ export const Container = styled.div`
     width: 300px;
 
     div:nth-child(1) {
-      font-size: ${({ theme }) => theme.COLORS.FSTITLE};
+      font-family: ${({ theme }) => theme.FONT.HEADER};
+      font-size: ${({ theme }) => theme.FONTSIZE.FSTITLE};
       color: ${({ theme }) => theme.COLORS.CYAN};
       justify-content: start;
-      font-weight: bold;
       opacity: 0;
     }
 
     div:nth-child(2) {
       opacity: 0;
       height: 90px;
+      font-family: ${({ theme }) => theme.FONT.HIGHLIGHTS};
     }
   }
 
@@ -93,11 +97,6 @@ export const Container = styled.div`
     &:nth-child(n + 5) > div {
       animation-delay: 1.8s;
     }
-  }
-
-  span {
-    font-style: italic;
-    color: ${({ theme }) => theme.COLORS.CYAN};
   }
 
   img {

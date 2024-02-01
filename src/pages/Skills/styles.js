@@ -1,15 +1,16 @@
 import styled from 'styled-components'
+import { Sansation } from "../../styles/fonts"
 
 export const Container = styled.div`
+
+  ${Sansation}
+
   height: 100%;
   overflow: hidden;
 
   > main {
-
     > div > p > span {
-      font-weight: bold;
-      font-size: ${({ theme }) => theme.COLORS.FSSPAN};
-      color: ${({ theme }) => theme.COLORS.CYAN};
+      font-size: ${({ theme }) => theme.FONTSIZE.FSSPAN};
     }
 
     > div:nth-child(2),
@@ -21,6 +22,10 @@ export const Container = styled.div`
       gap: 12px;
       padding: 8%;
       border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
+
+      > p {
+        font-family: ${({ theme }) => theme.FONT.HIGHLIGHTS};
+      }
     }
   }
 `

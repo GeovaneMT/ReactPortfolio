@@ -1,6 +1,8 @@
 import styled from "styled-components"
+import { Sansation } from "../../styles/fonts"
 
 export const Container = styled.div`
+  ${Sansation}
   height: 100%;
   overflow: hidden;
 
@@ -9,17 +11,12 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
 
-    &:not(:last-child)> p {
+    &:not(:last-child) > p {
       text-align: left;
-
-      > span {
-        font-weight: bold;
-        color: ${({ theme }) => theme.COLORS.CYAN};
-      }
+      font-family: ${({ theme }) => theme.FONT.HIGHLIGHTS};
 
       &:nth-child(2) {
         > span {
-          font-size: ${({ theme }) => theme.COLORS.FSSPAN};
         }
       }
     }
